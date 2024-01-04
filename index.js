@@ -257,27 +257,86 @@ let t6 = !(c1 > c2);
 /* Switch Condition */
 
 
-let ranks1 = 2;
+// let ranks1 = 2;
 
-switch (ranks1) {
-    case 0:
-        console.log(`Rank1 => Football is best`);
-        break;
-    case 1:
-        console.log(`Rank1 => Cricket is best`);
-        break;
-    case 2:
-        console.log(`Rank1 => Badminton is best`);
-        break;
-    case 3:
-        console.log(`Rank1 => Hockey is best`);
-        break;
-    case 4:
-        console.log(`Rank1 => Chess is best`);
-        break;
-    case 5:
-        console.log(`Rank1 => Carrom is best`);
-        break;
-    default:
-        console.log(`Rank1 => Other games are best but not in top 5 like - Ludo, Kabaddi, Golf....`)
-}
+// switch (ranks1) {
+//     case 0:
+//         console.log(`Rank1 => Football is best`);
+//         break;
+//     case 1:
+//         console.log(`Rank1 => Cricket is best`);
+//         break;
+//     case 2:
+//         console.log(`Rank1 => Badminton is best`);
+//         break;
+//     case 3:
+//         console.log(`Rank1 => Hockey is best`);
+//         break;
+//     case 4:
+//         console.log(`Rank1 => Chess is best`);
+//         break;
+//     case 5:
+//         console.log(`Rank1 => Carrom is best`);
+//         break;
+//     default:
+//         console.log(`Rank1 => Other games are best but not in top 5 like - Ludo, Kabaddi, Golf....`)
+// }
+
+
+// JavaScript For Loop for number:-
+
+const n = 10;
+
+for (let i = 1; i <= n; i++) {
+    // console.log(`Loop Runs => ${i}`);
+};
+
+// JavaScript For Loop for array:-
+
+const array1 = ['Raj', 'Harsh', 'Tarun', 'Vedant'];
+
+for (let i = 0; i < array1.length; i++) {
+    // console.log([i], array1[i]);
+};
+
+
+// JavaScript For in Loop for array:-
+
+for (let result in array1) {
+    // console.log(result)
+};
+
+
+// JavaScript For of Loop for array:-
+
+for (let result of array1) {
+    // console.log(result)
+};
+
+
+// while loop:-
+
+// let no = 0;
+
+// while (no < 5) {
+//     no++;
+//     console.log(no);
+// }
+
+// do while loop:-
+
+let no = 10;
+
+do {
+    no++;
+    // console.log(no);
+} while (no < 5)
+
+
+// Data Types in Javascript:-
+
+// String,Numbers,Bigint,Boolean,Undefined,Null,Symbol,Object
+
+// The Object Datatype:-
+
+// An object, An array,A date
