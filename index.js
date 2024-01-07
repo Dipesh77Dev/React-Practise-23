@@ -316,27 +316,219 @@ for (let result of array1) {
 
 // while loop:-
 
-// let no = 0;
+let no = 0;
 
-// while (no < 5) {
-//     no++;
-//     console.log(no);
-// }
+while (no < 5) {
+    no++;
+    // console.log(no);
+}
 
 // do while loop:-
 
-let no = 10;
+let no1 = 10;
 
 do {
-    no++;
-    // console.log(no);
-} while (no < 5)
+    no1++;
+    // console.log(no1);
+} while (no1 < 5)
 
 
-// Data Types in Javascript:-
+/* Data Types in Javascript:-
+1] Primitive[immutable] Vs Non primitive[mutable].
+In JS, datatypes are represented as primitive[immutable/pass by value], non-primitive[mutable/pass by reference].
 
-// String,Numbers,Bigint,Boolean,Undefined,Null,Symbol,Object
+Primitive[Value & Immutable] -> 
+Primitive data types include numbers, strings, booleans, null, and undefined, (not necessary - symbol & bigint). They are immutable, which means their values cannot be changed once they are created. When you perform operations on primitive values, you're actually creating new values rather than modifying the original ones.
+eg. 
+let str1 = "Hello";
+let str2 = str1; // Creating a new reference to the same value
+str2 = "Hi"; // A new string is created with the value "Hi", but str1 remains "Hello"
 
-// The Object Datatype:-
+let num1 = 5;
+let num2 = num1;
+num2 = 10; // A new number is created with the value 10, but num1 remains 5
 
-// An object, An array,A date
+
+Non-Primitive[Reference & Mutable] {array, object, function}->
+Non-primitive data types include objects (including arrays and functions), and these values are mutable. When you work with non-primitive data types, you are working with references to the underlying data. Modifying the reference will affect the data itself.
+
+let arr1 = [1, 2, 3];
+let arr2 = arr1; // Both arr1 and arr2 refer to the same array
+arr2.push(4); // Modifies the original array, both arr1 and arr2 show [1, 2, 3, 4]
+
+let obj1 = { name: "Alice" };
+let obj2 = obj1;
+obj2.name = "Bob"; // Modifies the original object, both obj1 and obj2 now have { name: "Bob" }
+
+The distinction between mutable and immutable only refers to whether the original value can be changed. For non-primitive types, like arrays and objects, the variables actually hold references to memory locations where the data is stored, not the data itself. This is why modifying the reference affects the underlying data.
+
+
+eg.
+const str = "Mango, Banana, Orange";
+// console.log("Orignal string => ", str);
+// console.log("Orignal string Before Change => " +  str);
+// console.log(str.slice(0,5));
+// console.log("Orignal string After Change => " + str);
+
+
+const arr = ["Mango", "Banana", "Orange", "Mango"];
+// console.log("Orignal array Before Change => " +  arr);
+// console.log(arr.indexOf(0,2));
+// console.log(arr.indexOf("Mango"));
+// console.log(arr.slice(0,2));
+// console.log("Orignal array After Change => " + arr);
+
+
+let str1 = "Hello";
+console.log(str1)
+let str2 = str1; // Creating a new reference to the same value
+console.log(str1 + " " + str2)
+str2 = "Hi"; // A new string is created with the value "Hi", but str1 remains "Hello"
+console.log(str1 + " " + str2)
+
+
+let arr1 = [1, 2, 3];
+console.log(arr1)
+let arr2 = arr1; // Both arr1 and arr2 refer to the same array
+console.log(arr1 + "-"+ arr2)
+arr2.push(4); // Modifies the original array, both arr1 and arr2 show [1, 2, 3, 4]
+console.log(arr1 + "-"+ arr2)
+*/
+
+
+/*
+8] Strings => 
+[
+String is zero or more characters written inside quotes. It are used for storing and manipulating text. We can use single or double quotes.
+Strings can be created as primitives, from string literals, or as objects, using the String() constructor. String can hold only one value in a variable. [eg. let car = "Audi",(Right) let car = "Audi", "BMW"(Wrong)]
+].
+
+Escape Character[\' => ' ==> Single Quote; \" => " ==> Double Quote; \\ => \ ==> Backslash; \b => backspace; \f => form feed; \n => New Line; \r => Carriage Return; \t => Horizontal Tabular; \v => Vertical Tabulars]
+
+Strings - [Properties - value (sq.length = ""); Methods - action/function(sq.indexOf());]
+
+Finding a String in String <--> [indexOf(), lastIndexOf(), .length - property]
+Searching for String in String <--> [search(regex)]
+Extracting String Parts <--> [slice(start, end); substring(start, end); substr(start, length)]
+Replacing String Content <--> [replace(), replaceAll()]
+Extracting String Characters <--> [charAt(position); charCodeAt(position), property access [ ] ].
+Other useful methods <--> [upperCase(); lowerCase(); concat(); trim(); pad;]; Convert String to an array using split method
+*/
+
+
+// 1] Finding(We can't find by regex) --> indexof("searchvalue", "fromwhere[optional]")  <--> get(return indexno.) [FD], notget(-1); lastIndexof("searchvalue", "fromwhere[optional]") <--> get(return) [BD], notget(-1)   ==>
+// Difference in Search & indexof() -
+// The search() method cannot take a second start position argument.
+// The indexOf() method cannot take powerful search values (regular expressions).
+
+
+// Indexof & lastIndexOf can't use regex...
+let mbg1 = "BGMI is the best game";
+let res1_1 = mbg1.indexOf("t");
+let res1_2 = mbg1.indexOf("t", 5);
+let res1_3 = mbg1.indexOf("t", 10);
+let res1_4 = mbg1.indexOf("t", 18);
+let res1_5 = mbg1.indexOf("T");
+let res1_6 = mbg1.indexOf(/T/i); 
+// console.log(`res1_1 => ${res1_1},
+// res1_2 => ${res1_2},
+// res1_3 => ${res1_3},
+// res1_4 => ${res1_4},
+// res1_5 => ${res1_5},
+// res1_6 => ${res1_6}
+// `);
+
+let mbg2 = "FF is the best game";
+let res2_1 = mbg2.lastIndexOf("t");
+let res2_2 = mbg2.lastIndexOf("t", 5);
+let res2_3 = mbg2.lastIndexOf("t", 10);
+let res2_4 = mbg2.lastIndexOf("t", 16);
+// console.log(`res2_1 => ${res2_1},   
+// res2_2 => ${res2_2},
+// res2_3 => ${res2_3},
+// res2_4 => ${res2_4},
+// `);
+
+// RegEx => /i - Case Sensitive; /g - Global Search
+
+let mbg3 = "CR is the best game";
+let res3_1 = mbg3.search("t");
+let res3_2 = mbg3.search("t", 5);
+let res3_3 = mbg3.search("t", 10);
+let res3_4 = mbg3.search("t", 16);
+let res3_5 = mbg3.search(/T/i);
+// console.log(`res3_1 => ${res3_1},   
+// res3_2 => ${res3_2},
+// res3_3 => ${res3_3},
+// res3_4 => ${res3_4},
+// res3_5 => ${res3_5},
+// `);
+
+
+
+
+// 2] Extracting - [slice(start, end); substring(start, end); substr(start, length)]    ==>
+
+// start main include, end main doesn't include
+
+let progLang1 =  "Python, Javascript, C++, Pandas";
+
+let slice1 = progLang1.slice(1,9);
+let slice2 = progLang1.slice(6,14);
+let slice3 = progLang1.slice(6);
+let slice4 = progLang1.slice(-3);
+let slice5 = progLang1.slice(-3, -10);
+let slice6 = progLang1.slice(-5, -3);
+let slice7 = progLang1.slice(14, 10);
+let slice8 = progLang1.slice(14, -3);
+
+// console.log(`slice1 -> ${slice1} 
+// slice2 -> ${slice2}
+// slice3 -> ${slice3}
+// slice4 -> ${slice4}
+// slice5 -> ${slice5}
+// slice6 -> ${slice6}
+// slice7 -> ${slice7}
+// slice8 -> ${slice8}
+// original string -> ${progLang1}
+// `);
+
+
+let progLan2 =  "SQL, MySQL, MongoDB, PostgreSQL";
+
+let substring1 = progLan2.substring(1,6);
+let substring2 = progLan2.substring(6,13);
+let substring3 = progLan2.substring(6);
+let substring4 = progLan2.substring(-3);
+let substring5 = progLan2.substring(-3, -10);
+let substring6 = progLan2.substring(-5, -3);
+let substring7 = progLan2.substring(14, 10);
+let substring8 = progLan2.substring(14, -3);
+
+// console.log(`substring1 -> ${substring1} 
+// substring2 -> ${substring2}
+// substring3 -> ${substring3}
+// substring4 -> ${substring4}
+// substring5 -> ${substring5}
+// substring6 -> ${substring6}
+// substring7 -> ${substring7}
+// substring8 -> ${substring8}
+// original string -> ${progLan2}
+// `);
+
+// Start => Length - 1, IndexNo - 0
+
+let progLan3 =  "Angular, React, Node, Express";
+let substrSlice1 = progLan3.substr(0, 4);
+let substrSlice2 = progLan3.substr(7, -2);
+let substrSlice3 = progLan3.substr(-4);
+let substrSlice4 = progLan3.substr(-4, 7);
+let substrSlice5 = progLan3.substr(-4, -10);
+
+// console.log(`substr1 -> ${substrSlice1} 
+// substr2 -> ${substrSlice2}
+// substr3 -> ${substrSlice3}
+// substr4 -> ${substrSlice4}
+// substr5 -> ${substrSlice5}
+// original string -> ${progLan3}
+// `)
