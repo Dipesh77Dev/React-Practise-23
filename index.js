@@ -429,7 +429,7 @@ let res1_2 = mbg1.indexOf("t", 5);
 let res1_3 = mbg1.indexOf("t", 10);
 let res1_4 = mbg1.indexOf("t", 18);
 let res1_5 = mbg1.indexOf("T");
-let res1_6 = mbg1.indexOf(/T/i); 
+let res1_6 = mbg1.indexOf(/T/i);
 // console.log(`res1_1 => ${res1_1},
 // res1_2 => ${res1_2},
 // res1_3 => ${res1_3},
@@ -471,10 +471,10 @@ let res3_5 = mbg3.search(/T/i);
 
 // start main include, end main doesn't include
 
-let progLang1 =  "Python, Javascript, C++, Pandas";
+let progLang1 = "Python, Javascript, C++, Pandas";
 
-let slice1 = progLang1.slice(1,9);
-let slice2 = progLang1.slice(6,14);
+let slice1 = progLang1.slice(1, 9);
+let slice2 = progLang1.slice(6, 14);
 let slice3 = progLang1.slice(6);
 let slice4 = progLang1.slice(-3);
 let slice5 = progLang1.slice(-3, -10);
@@ -494,10 +494,10 @@ let slice8 = progLang1.slice(14, -3);
 // `);
 
 
-let progLan2 =  "SQL, MySQL, MongoDB, PostgreSQL";
+let progLan2 = "SQL, MySQL, MongoDB, PostgreSQL";
 
-let substring1 = progLan2.substring(1,6);
-let substring2 = progLan2.substring(6,13);
+let substring1 = progLan2.substring(1, 6);
+let substring2 = progLan2.substring(6, 13);
 let substring3 = progLan2.substring(6);
 let substring4 = progLan2.substring(-3);
 let substring5 = progLan2.substring(-3, -10);
@@ -518,7 +518,7 @@ let substring8 = progLan2.substring(14, -3);
 
 // Start => Length - 1, IndexNo - 0
 
-let progLan3 =  "Angular, React, Node, Express";
+let progLan3 = "Angular, React, Node, Express";
 let substrSlice1 = progLan3.substr(0, 4);
 let substrSlice2 = progLan3.substr(7, -2);
 let substrSlice3 = progLan3.substr(-4);
@@ -532,3 +532,159 @@ let substrSlice5 = progLan3.substr(-4, -10);
 // substr5 -> ${substrSlice5}
 // original string -> ${progLan3}
 // `)
+
+
+/* Replacing String Content <--> [
+     replace() syntax is => replace(searchFor, replaceWith) 
+     , replaceAll()]*/
+
+
+let langData = "Programming language javascript is easy but javascript is not too easy for bigenners.";
+let resOne = langData.replace('javascript', 'python');
+let resTwo = langData.replace('JAVASCRIPT', 'python');
+let resThree = langData.replace(/JAVASCRIPT/i, 'python');
+let resFour = langData.replace(/JAVASCRIPT/g, 'PHP');
+let resFive = langData.replace(/javascript/g, 'PHP');
+//  let resSix = langData.replace(/javascript/i/g,'PHP'); 
+let resSeven = langData.replaceAll("javascript", 'PHP');
+let resEight = langData.replaceAll('JAVASCRIPT', 'PHP');
+//  let resNine = langData.replaceAll(/JAVASCRIPT/i,'PHP');
+//  let resTen = langData.replaceAll(/JAVASCRIPT/g,'PHP');
+
+// console.log(`
+//     Result One => ${resOne}
+//     Result Two => ${resTwo}
+//     Result Three => ${resThree}
+//     Result Four => ${resFour}
+//     Result Five => ${resFive}
+//     Result Seven => ${resSeven}
+//     Result Eight => ${resEight}`)
+
+
+
+/* Extracting String Characters <--> [
+    1. charAt(position)  => It returns the character at a specified index (position) in a string. It doesn't work with negative index values.
+
+     2 charCodeAt(position) => 
+     // charCodeAt(position) - It returns the unicode of the character at a specified index in a string:
+     // The method returns a UTF-16 code(an integer between 0 and 65535).
+     // The Unicode Standard provides a unique number for every character, no matter the platform, device, application, or language. UTF-8 is a popular Unicode encoding which has 88-bit code units. But if we provide negative index it will return as NaN.
+     3. property access [ ] => Property Access (ECMAScript 5 - 2009) - It allows property access [ ] on a strings..].*/
+
+let DataLanguage = "MongoDB";
+let data1 = DataLanguage.charAt(2);
+let data2 = DataLanguage.charAt(5);
+let data3 = DataLanguage.charAt(7);
+
+// console.log(`
+// Character 1 => ${data1}
+// Character 2 => ${data2}
+// Character 3 => ${data3}`)
+
+let NationLang = "Hindi";
+
+let data4 = NationLang.charCodeAt(1);
+let data5 = NationLang.charCodeAt(3);
+let data6 = NationLang.charCodeAt(6);
+let data7 = NationLang.charCodeAt(-4);
+// console.log(`
+// Unicode 4 => ${data4}
+// Unicode 5 => ${data5}
+// Unicode 6 => ${data6}
+// Unicode 7 => ${data7}`)
+
+
+let PropEx = "Languages";
+
+let propRes1 = PropEx[0];
+let propRes2 = PropEx[3];
+let propRes3 = PropEx[5];
+let propRes4 = PropEx[10];
+
+// console.log(`
+// PropRes1 => ${propRes1}
+// PropRes2 => ${propRes2}
+// PropRes3 => ${propRes3}
+// PropRes4 => ${propRes4}`)
+
+
+/* Other Methods => 
+
+ upperCase()  It change string into uppercase,
+ lowerCase() => It change string into lowercase,
+  concat()    => to join or concat strings,
+  trim()      => It removes whitespace from both sides of a string,
+  pad()       => it gives widespace.
+  split()     => convert string into array.
+*/
+
+let PerOne = "harsh";
+let PerTwo = "TARUN";
+let UcRes = PerOne.toUpperCase();
+let LcRes = PerTwo.toLowerCase();
+
+// console.log(`
+// Uppercase => ${UcRes}
+// Lowercase => ${LcRes}
+// `);
+
+let Fname = "Harsh";
+let Lname = "Hariyani";
+let fullName = Fname.concat(" ", Lname);
+// console.log(`FullName is => ${fullName}`);
+
+
+let useText = "               Hy         Harsh             ";
+let useText1 = "Hy Harsh             ";
+let trimOne = useText.trim();
+let trimOne1 = useText1.trim();
+let trimStrat = useText.trimStart();
+let trimEnd = useText.trimEnd();
+
+// console.log(`
+// Trim Result => ${trimOne}
+// TrimOne Result => ${trimOne1}
+// TrimStart Result => ${trimStrat}
+// TrimEnd Result => ${trimEnd}
+// `);
+
+
+let EngAlpha = "a ,b ,c ,d ,e ,f";
+let languages = "Javascript PHP Python";
+let country = "India | Pakistan | Bangladesh";
+let split1 = EngAlpha.split(",");                // comma
+let split2 = languages.split(" ");               // space
+let split3 = country.split(" | ");               // pipeline
+
+// console.log(`
+// Split One => ${split1}
+// Split Two => ${split2}
+// Split Three => ${split3}
+// `);
+
+let textData = "Surat";
+let padStart = textData.padStart(10);
+let padEnd = textData.padEnd(12) + "ok";
+let padStart1 = textData.padStart(14);
+let padEnd2 = textData.padEnd(16) + "Extra";
+
+// console.log(`
+// padStart => ${padStart}
+// padEnd => ${padEnd}
+// padStart1 => ${padStart1}
+// padEnd2 => ${padEnd2}
+// `);
+
+let text1 = "Python";
+let tres1 = text1.at(2);
+let tres2 = text1[4];
+
+// console.log(`
+// At two => ${tres1}
+// At four => ${tres2}
+// `);
+
+
+
+
+
