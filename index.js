@@ -687,4 +687,28 @@ let tres2 = text1[4];
 
 
 
+/* Search Methods/Match Methods - match('value'), matchAll(), include("value", start position[optional]), startsWith(), endsWith() includes, startsWith(), endsWith() we can't use regex.*/
+
+
+
+let p = "Gym popular quoto is no PAIN no gain";
+let p1 = "I love cats. Cats are very easy to love. Cats are very popular.";
+let pRes1 = p.match("ain");
+let pRes2 = p.match("ain", 16);  // we can't use 2nd argument
+let pRes3 = p.match("AIN");
+let pRes4 = p.match(/ain/i);
+let pRes5 = p.match(/Ain/i);
+let pRes6 = p.match(/ain/gi);    // it will return all global characters we need.
+
+let p1Res1 = p.matchAll("ain")    // Object [RegExp String Iterator] {}
+let p1Res2 = p1.matchAll("Cats")  //  Object [RegExp String Iterator] {}
+
+// console.log(`
+// pRes1 => ${pRes1}
+// pRes2 => ${pRes2}
+// pRes3 => ${pRes3}
+// pRes4 => ${pRes4}
+// pRes5 => ${pRes5}
+// pRes6 => ${pRes6}
+// `)
 
