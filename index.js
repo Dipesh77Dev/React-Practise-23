@@ -687,7 +687,13 @@ let tres2 = text1[4];
 
 
 
-/* Search Methods/Match Methods - match('value'), matchAll(), include("value", start position[optional]), startsWith(), endsWith() includes, startsWith(), endsWith() we can't use regex.*/
+
+
+
+
+
+/* Search Methods/Match Methods - match('value'), matchAll(),
+ include("value", start position[optional]), startsWith(), endsWith() includes => It return boolean values., startsWith(), endsWith() =>  It return boolean values & we can't use regex in it.*/
 
 
 
@@ -712,3 +718,75 @@ let p1Res2 = p1.matchAll("Cats")  //  Object [RegExp String Iterator] {}
 // pRes6 => ${pRes6}
 // `)
 
+
+let avail = "Hello Harsh, welcome in Javascript tutorial";
+let availRes1 = avail.includes("Harsh");
+let availRes2 = avail.includes("Harsh", 4);
+let availRes3 = avail.includes("Harsh", 8);
+let availRes4 = avail.includes("harsh");
+
+// console.log(`
+// availRes1 => ${availRes1}
+// availRes1$=> ${availRes2}
+// availRes1$=> ${availRes3}
+// availRes1$=> ${availRes4}
+// `);
+
+let staW = "Hello world, welcome to the universe."
+
+let staWres1 = staW.startsWith("Hello");
+let staWres2 = staW.startsWith("Hello", 10);
+let staWres3 = staW.startsWith("Hello", 2);
+let staWres4 = staW.startsWith("world", 2);
+let staWres5 = staW.startsWith("world", 6);
+
+// console.log(`
+// staWres1 => ${staWres1}
+// staWres2 => ${staWres2}
+// staWres3 => ${staWres3}
+// staWres4 => ${staWres4}
+// staWres5 => ${staWres5}
+// `); 
+
+let nName = "Harsh Hariyani";
+let nNameRes1 = nName.endsWith("Hariyani");
+let nNameRes2 = nName.endsWith("Hariyani",5);
+let nNameRes3 = nName.endsWith("Hariyani",6);
+let nNameRes4 = nName.endsWith("Hariyani", 14);
+let nNameRes5 = nName.endsWith("Harsh");
+
+// console.log(`
+// nNameRes1 => ${nNameRes1}
+// nNameRes1 => ${nNameRes2}
+// nNameRes1 => ${nNameRes3}
+// nNameRes1 => ${nNameRes4}
+// nNameRes1 => ${nNameRes5}
+// `);
+
+
+// repeat() method Syntax=> string.repeat(count)
+// The number of copies wanted.
+
+let repStr = "Hello World...!";
+let repRes = repStr.repeat(5);
+// console.log(` Result of repRes => ${repRes}`);
+
+
+/*
+7] Arrays =>
+Array[
+When we use var, we can store only 1 value/data at a time. 
+But when we had to store multiple values & datatypes in one variable then we use array. In Js we have an array class & array are the prototype of this class].
+var names = ["Raj", "Dipu", "Lollz"]
+Raj - Lower Index/Lower Boundary/Starting Element; Lollz - Upper Index, Upper Boundary/Ending element.
+So in array inside this [] is called as Elements.
+So to access each individual elements we had the index no. & it starts with 0 & to access last element - we can had array.length - 1. 
+Length starts with 1 & index starts with 0, if we had to go reverse so its starts with -1
+
+
+Traversal of Array <--> [length, for loop, for in, for of, forEach()]
+Search & Filter in an Array <--> [Search -> indexOf(), lastIndexOf(), includes(); Filter -> find(), findIndex(), filter()]
+Sort & Compare an Array <--> [sort(), reverse()]
+Insert, Read, Replace/update, Delete elements in array[CRUD Operation] <--> [push(), pop(), shift(), unshift(), splice()]
+Map(), Reduce(), Filter()
+*/
