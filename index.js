@@ -810,3 +810,310 @@ let frg4 = frg[4];
 // Element 3rd is => ${frg3}
 // Element 4th is => ${frg4}
 // `);
+
+/*  Array in Javasript:- */
+
+
+// Excessing Whole Array:-
+
+let arr = ["Raj", "Vedant", "Harsh", "Tarun"];
+// console.log(Whole Array = `${arr}`);
+
+
+// creating an array by providing the elements:- 
+
+let frGroup = [];
+frGroup[0] = "Harsh";
+frGroup[1] = "Raj";
+frGroup[2] = "Vedant";
+frGroup[3] = "Tarun";
+// console.log(`Friends Group = ${frGroup}`);
+
+
+// Assigening an array by new Array keword:-
+
+let players = new Array("Virat", "Rohit", "Surya", "Gill");
+// console.log(`All player = ${players}`);
+
+
+// Excessing an element in Array:-
+
+let arr1 = ["Vikas", "Utkarsh", "Mohit", "Aman"];
+let ind1 = arr1[1];
+// console.log(`1st index Element = ${ind1}`);
+
+
+// Changing an array Element:-
+
+let items = ["pen", "erasor", "sharpner", "scale"];
+items[0] = "pencil";
+// console.log(`Drawing Items = ${items}`);
+
+
+// toString() method => It converts an array into string.
+
+let changeToStr = arr1.toString();
+// console.log(`Array into string = ${changeToStr}`);
+// console.log(typeof (changeToStr));                     // now it is string
+
+
+// For get individual values by giving array's index values:-
+
+let p4 = ["Harsh", "Hariyani", 19];
+let fName = p4[0]
+let lName = p4[1]
+let age = p4[2];
+
+// console.log(`
+// FirstName = ${fName}
+// LastName = ${lName}
+// Age = ${age}`
+// );
+
+// For get individual values by giving object name with it's keys:-
+
+let p2 = { Fname: "Tarun", Lname: "Upadhyay", age: 26 };
+let firstName = p2.Fname;
+let LastName = p2.Lname;
+let myAge = p2.age;
+
+// console.log(`
+// FirstName = ${firstName}
+// LastName = ${LastName}
+// myAge = ${myAge}
+// `);
+
+
+// length property => It define the length of an array total numbers of elements in it. 
+let arr2 = ["Cat", true, 2, undefined];
+let lenOfarr2 = arr2.length;
+// console.log(`Array length = ${lenOfarr2}`);
+
+
+// Excessing the last element of array:-
+
+let comp = ["Bajaj", "TVS", "Honda", "Suzuki"];
+let lastElem = comp[comp.length - 1];
+// console.log(`Last Element = ${lastElem}`);
+
+
+
+/*
+Traversal of Array <--> [length, for loop, for in, for of, forEach()]
+Search & Filter in an Array <--> [Search -> indexOf(), lastIndexOf(), includes(); Filter -> find(), findIndex(), filter()]
+Sort & Compare an Array <--> [sort(), reverse()]
+Insert, Read, Replace/update, Delete elements in array[CRUD Operation] <--> [push(), pop(), shift(), unshift(), splice()]
+Map(), Reduce(), Filter()
+Other methods -
+*/
+
+// Traverse by for loop => It will give whole array once.
+
+const fruits = ["Banana", "Orange", "Apple", "Mango"];
+
+for (let i = 0; i < fruits.length; i++) {
+    // console.log(`The Value = ${fruits[i]}`);
+};
+
+
+// Traverse by  for in => It gives index numbers:-
+
+for (elements in fruits) {
+    // console.log(`The Index = ${elements}`);
+};
+
+
+// for of => It gives values/elements:-
+
+for (elements of fruits) {
+    // console.log(`{elements}`);
+};
+
+
+// named or normal function:-
+
+function harshFunction() {
+    // code for Exicution
+}
+
+// Fat Arrow Function:-
+
+const funcTarun = () => {
+    // code for Exicution
+}
+
+
+// for each[calls a function for each elements in an array OR
+// We can pass one callback function with this 3 params - elements(particular element in array), index(index no), array(particular array), thisArg(not mandatory/optional)]
+// Combination of for In + for of = for Each.
+// In for each we can't have break statement bcoz if it starts with data it will show the data to us till the end
+// thisArg(4th parameter) it supports in normal function, in fat arrow we can't pass the 4th parameter in it -
+
+// By Normal function:-
+
+let kitchen = ["Bowls", "Spoons", "Forks", "Dish"];
+
+kitchen.forEach(function (element, index, array) {
+    // console.log(`
+    //     Indexes  => ${index}
+    //     Eements  => ${element}
+    //     Arrays => ${array}
+    //     `);
+})
+
+
+// By Fat Arrow function:-
+
+kitchen.forEach((element, index, array) => {
+    // console.log(`
+    //     Indexes  => ${index}
+    //     Eements  => ${element}
+    //     Arrays => ${array}
+    //     `);
+})
+
+
+
+// Search Methods in Array => 
+
+// Sytax =>  indexOf()  = indexof("searchvalue", "fromwhere[optional]") get value in Forward direction .
+
+let FrGroup = ["Raj", "Vedant", "Harsh", "Teerth", "Ayush", "Tarun", "Harsh", "Abhishek", "Aman", "Shivam"];
+
+let find1 = FrGroup.indexOf("Harsh");
+let find2 = FrGroup.indexOf("Harsh", 3);
+let find3 = FrGroup.indexOf("Harsh", 9);
+let find4 = FrGroup.indexOf("Harsh", 6);
+
+// console.log(`
+//  indexOf Harsh => ${find1}
+//  indexOf Harsh => ${find2}
+//  indexOf Harsh => ${find3}
+//  indexOf Harsh => ${find4}
+//  `);
+
+
+// Sytax =>  lastIndexof()  = lastIndexof("searchvalue", "fromwhere[optional]") get value in Backward direction.
+
+
+let search1 = FrGroup.lastIndexOf("Harsh");
+let search2 = FrGroup.lastIndexOf("Harsh", 4);
+let search3 = FrGroup.lastIndexOf("Harsh", 1);
+
+// console.log(`
+// Search1 = ${search1}
+// Search2 = ${search2}
+// Search3 = ${search3}
+// `);
+
+
+// Syntax => includes() = include("value", start position[optional])
+
+
+let inc1 = FrGroup.includes("Ayush");
+let inc2 = FrGroup.includes("Ayush", 4);
+let inc3 = FrGroup.includes("Ayush", 9);
+
+// console.log(`
+// inc1 = ${inc1}
+// inc2 = ${inc2}
+// inc3 = ${inc3}
+// `);
+
+
+// Filter Methods -> find(), findIndex(), filter()]
+
+/* find()  => It will return the test passing first element of array. */
+
+let arrNum = [0, 100, 200, 300, 500, 700, 900, 1000];
+
+// let findMet1 = arrNum.find(myFunc);
+
+// console.log(findMet);
+// function myFunc(value, index, array) {
+//     return value > 200;
+// }
+
+/* findIndex()  => It will return the test passing first element's index value. */
+
+
+// let findMet2 = arrNum.findIndex(myFunc1);
+
+// console.log(findMet2);
+// function myFunc1(value, index, array) {
+//     return value > 200;
+// }
+
+/* filter()  => It will return the test passing all the element in a new array. */
+
+// let findMet3 = arrNum.filter(myFunc2);
+
+// console.log(findMet3);
+// function myFunc2(value, index, array) {
+//     return value > 200;
+// }
+
+
+// Sort & Compare an Array:-
+
+// The sort() method sorts an array alphabetically:-
+// The reverse() method reverse an array alphabetically in backward:-
+
+let months = ['January', 'February', "March", "December", "April", "October"];
+let sortMonths = months.sort();
+let reverseMonths = months.reverse();
+
+// console.log(`
+// Array sort = ${sortMonths}
+// Array reverse = ${reverseMonths}
+// `);
+
+/* Other Methods =>  [push(), pop(), shift(), unshift(), splice()]
+ Map(), Reduce(), Filter()*/
+
+//  The push() method adds a new element to an array (at the end):-
+//  The pop() method removes an element in an array (at the end):-
+//  The unshift() method add an element in an array (at the start):-
+//  The shift() method removes an element in an array (at the start):-
+
+let veg = ["Tomato", "Potato", "Okra", "Cabbage", "Coliflower"];
+// let pushElem = veg.push("Bringel");
+// let popElem = veg.pop();
+// let unshiftElem = veg.unshift("Carrot");
+let shiftElem = veg.shift();
+
+// console.log(`
+// Length Return after push = ${pushElem}
+// Array Return after push= ${veg}
+// `);
+
+
+// console.log(`
+// Array element who is poped = ${popElem}
+// Array after pop method = ${veg}
+// `);
+
+
+// console.log(`
+// Array element who is unshift = ${unshiftElem}
+// Array after unshift method = ${veg}
+// `);
+
+
+// console.log(`
+// Array element who is shift = ${shiftElem}
+// Array after shift method = ${veg}
+// `);
+
+
+/* splice() method => 
+
+The first parameter (2) defines the position where new elements should be added (spliced in).
+The second parameter (0) defines how many elements should be removed.
+The rest of the parameters ("CSS" , "Javascript") define the new elements to be added.
+*/
+
+let it1 = ["Python", "C", "PHP", "Pandas"];
+// let spIt1 = it1.splice(2, 0, "CSS", "Javascript");
+let spIt2 = it1.splice(1, 2, "CSS", "Javascript");
+// console.log(`After splice method = ${it1}`);
