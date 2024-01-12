@@ -750,8 +750,8 @@ let staWres5 = staW.startsWith("world", 6);
 
 let nName = "Harsh Hariyani";
 let nNameRes1 = nName.endsWith("Hariyani");
-let nNameRes2 = nName.endsWith("Hariyani",5);
-let nNameRes3 = nName.endsWith("Hariyani",6);
+let nNameRes2 = nName.endsWith("Hariyani", 5);
+let nNameRes3 = nName.endsWith("Hariyani", 6);
 let nNameRes4 = nName.endsWith("Hariyani", 14);
 let nNameRes5 = nName.endsWith("Harsh");
 
@@ -790,3 +790,23 @@ Sort & Compare an Array <--> [sort(), reverse()]
 Insert, Read, Replace/update, Delete elements in array[CRUD Operation] <--> [push(), pop(), shift(), unshift(), splice()]
 Map(), Reduce(), Filter()
 */
+
+
+/*Array Length property */
+
+let pl = ["Rohit", "Gill", "Virat", "Iyer"];
+let lenPl = pl.length;
+// console.log(`Array pl length is => ${lenPl}`);
+
+/*Excessing Array Elements */
+
+let frg = ["Raj", "Harsh", "Vedant", "Tarun"];
+let frg2 = frg[1];
+let frg3 = frg[3];
+let frg4 = frg[4];
+
+// console.log(`
+// Element 2nd is => ${frg2}
+// Element 3rd is => ${frg3}
+// Element 4th is => ${frg4}
+// `);
