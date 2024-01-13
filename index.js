@@ -1117,3 +1117,217 @@ let it1 = ["Python", "C", "PHP", "Pandas"];
 // let spIt1 = it1.splice(2, 0, "CSS", "Javascript");
 let spIt2 = it1.splice(1, 2, "CSS", "Javascript");
 // console.log(`After splice method = ${it1}`);
+
+
+/* map() method*/
+
+// The map() method creates a new array by performing a function on each array element.
+// Note =>  map filter & reduce methods doesn't effecr the original array.
+
+let numsForArr = [25, 14, 5, 61, 8];
+
+let numsForArr1 = numsForArr.map(myMulFunc);
+
+// console.log(`
+// New Array = ${numsForArr1}
+// Original Array = ${numsForArr}
+// `);
+
+function myMulFunc(value, index, array) {
+    return value * 2;
+}
+
+/* filter() method*/
+
+// The filter() method creates a new array with array elements that pass a test.
+
+let numsForArr2 = numsForArr.filter(myMulFunc1);
+
+// console.log(`
+// New Array = ${numsForArr2}
+// Original Array = ${numsForArr}
+// `);
+
+function myMulFunc1(value, index, array) {
+    return value > 20;
+}
+
+/* reduce() method */
+
+// The reduce() method runs a function on each array element to produce (reduce it to) a single value.
+
+let numsForArr3 = numsForArr.reduce(myMulFunc2);
+
+// console.log(`
+// New Array with sum = ${numsForArr3}
+// Original Array = ${numsForArr}
+// `);
+
+function myMulFunc2(total, value, index, array) {
+    return total + value;
+}
+
+
+/* slice() method */
+
+/* 1. The slice() method slices out a piece of an array into a new array. The slice() method creates a new array. The slice() method does not remove any elements from the source array/original array.
+2. The slice() method can take two arguments like slice(1, 3). The method then selects elements from the start argument, and up to (but not including) the end argument.
+*/
+
+let bhaiLog = ["Mandar", "Vedant", "Harsh", "Tarun", "Raj"];
+let bhaiS = bhaiLog.slice(1)
+let bhaiS1 = bhaiLog.slice(1, 4)
+let bhaiS2 = bhaiLog.slice(1, 5)
+
+// console.log(`
+// With one argument = ${bhaiS}
+// With two argument = ${bhaiS1}
+// With second argument who isn't correct = ${bhaiS2}
+// `);
+
+// Other methods - some() & every(), keys(), values(), entries(), from(), delete(), concat(), join(), toString() =>
+
+
+/* some() Method =>  like or(|) operator , if any one condition is true returns true, if all are false returns false..*/
+
+let sumNum = [24, 44, 64, 86, 114, 228];
+
+let resOfsum = sumNum.some(mySumNumFunc);
+// console.log(`Result for some method = ${resOfsum}`);
+
+function mySumNumFunc(value, index, array) {
+    return value > 60;
+}
+
+/* every() Method =>  like and(&) operator , if all elements condition satisfied returns true, does'nt satisfies it will return false..*/
+
+
+let resOfsum1 = sumNum.every(mySumNumFunc1);
+// console.log(`Result for every method = ${resOfsum1}`);
+
+function mySumNumFunc1(value, index, array) {
+    return value > 60;
+}
+
+
+/* 
+1. key() Method => It returns an Array Iterator object with the keys of an array,
+2.  values() - method returns an Array Iterator object with the values of an array,
+3.  entries() - method returns an Array Iterator object with key/value pairs. 
+*/
+
+let frgrp = ["Mango", "Banana", "Apple", "Grapes"];
+let rfrgp1 = frgrp.keys();
+let rfrgp2 = frgrp.values();
+let rfrgp3 = frgrp.entries();
+
+// console.log(`
+// keys in array => ${rfrgp1}
+// values in array => ${rfrgp2}
+// entries in array => ${rfrgp3}
+// `);
+
+// for (let keys1 in rfrgp1) {  // not work
+//     console.log(keys1)
+//   }
+
+// for (let keys1 of rfrgp1) {  // it works
+//     console.log(keys1)
+//   }
+
+// for (let values in rfrgp2) {  // not work
+//     console.log(values)
+//   }
+
+// for (let values of rfrgp2) {  // it works
+//     console.log(values)
+//   }
+
+
+// for (let entries in rfrgp3) {  // not work
+//     console.log(entries)
+//   }
+
+// for (let entries of rfrgp3) {  // it works
+//     console.log(entries)
+//   }
+
+let CwC2023Teams = ["India", "Newzealand", "South Africa", "Australia", "England", "Pakistan"];
+let fromTeams = Array.from(CwC2023Teams);
+// console.log(fromTeams);
+
+let fromTeams1 = CwC2023Teams[0];
+// console.log(fromTeams1);
+
+let fromTeams2 = Array.from(fromTeams1);
+// console.log(fromTeams2);
+
+CwC2023Teams.map((cv) => {
+    // console.log(Array.from(cv));
+})
+
+/* toString() Method */
+// It converts array into string.
+
+let tostringTeams = CwC2023Teams.toString();
+//   console.log(tostringTeams);
+
+let fromTaken = Array.from(tostringTeams);
+// console.log(fromTaken);
+
+
+/* delete() Method */
+
+// It deletes the item you want to delete as give it's index.
+
+let DecoItems = ["Flowers", "Colorstrips", "Balloons", "Sparkletape"];
+delete DecoItems[1];
+
+// console.log(`
+// It return Array with deleted empty place = ${DecoItems}
+// It return deleted item as Undefined = ${DecoItems}
+// `);
+
+
+// concat() method => add/concat two arrays together.
+
+let studBoys = ["Harsh", "Tarun", "Raj"];
+let studGirls = ["Ananya", "Sneha", "Priya"];
+let studChildren = studBoys.concat(studGirls);
+
+// console.log(`
+// All studChildren = ${studChildren}
+// `);
+
+// join() method => join the elements in between the elements.
+
+let studClass = ["Ramesh", "Priya", "Manish", "Vishal"];
+let joinAdd1 = studClass.join(" + ");
+let joinstar2 = studClass.join(" * ");
+
+// console.log(`
+// Join add = ${joinAdd1}
+// Join star = ${joinstar2}
+// `);
+
+// at() method => it tell that what element is present on that index.
+
+let atElemOn = studClass.at(2);
+// console.log(`At 2nd index = ${atElemOn}`);
+
+
+// findLast() => ES2023 added the findLast() method that will start from the end of an array and return the value of the first element that satisfies a condition.
+// The findLastIndex() method finds the index of the last element that satisfies a condition.
+
+
+let temprature = [32, 25, 16, 42, 44, 40, 43, 24];
+let checqTemp = temprature.findLast(x => x > 40);
+let checqTempInd = temprature.findLastIndex(x => x > 40);
+
+// console.log(`
+// FindLast temprature => ${checqTemp}
+// FindLast Index of temprature => ${checqTempInd}
+// `);
+
+
+
