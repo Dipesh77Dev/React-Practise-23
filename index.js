@@ -1330,4 +1330,167 @@ let checqTempInd = temprature.findLastIndex(x => x > 40);
 // `);
 
 
+/* copyWithin() method */
+
+// The copyWithin() method copies array elements to another position in an array.
+/* The copyWithin() method overwrites the existing values.
+The copyWithin() method does not add items to the array.
+The copyWithin() method does not change the length of the array. */
+
+elemfr = ["Mango", "Papaya", "Pomogranate", "Orange", "Apple"];
+let resFrElem = elemfr.copyWithin(1, 2);
+let resFrElem1 = elemfr.copyWithin(0, 1);
+let resFrElem2 = elemfr.copyWithin(-1);
+
+// console.log(`
+// First Result = ${resFrElem}
+// Second Result = ${resFrElem1}
+// Second Result = ${resFrElem2}
+// `);
+
+/*Numeric sort() */
+
+let numS = [20, 1, 52, 31, 26, 14];
+
+// numS.sort(function(dg1,dg2){
+//     return (dg1 -dg2);
+// })
+// console.log(`Num short result = ${numS}`);
+
+
+/* Random sort() */
+
+const mathR = [40, 100, 1, 5, 25, 10];
+// document.getElementById("mrmethod").innerHTML = mathR;  
+
+function mathRadFunc() {
+    mathR.sort(function () { return 0.5 - Math.random() });
+    //   document.getElementById("mrmethod").innerHTML = mathR;
+}
+
+
+// You can use Math.min.apply to find the lowest number in an array:
+
+let maxMinVal = [20, 15, 2, 52, 36, 12];
+// console.log(`Minimum Value = ${mathMin(maxMinVal)}`);
+
+function mathMin(arr) {
+    return Math.min.apply(null, arr);
+}
+
+// You can use Math.max.apply to find the highest number in an array:
+
+// console.log(`Maximum Value = ${mathMax(maxMinVal)}`);
+
+function mathMax(arr) {
+    return Math.max.apply(null, arr);
+}
+
+// The ... operator expands an iterable (like an array) into more elements:
+
+let tOrder = ["Rohit","Gill","Virat"];
+let mOrder = ["Iyer","Rahul","Sky","Jadeja"];
+let tailOrder = ["Kuldeep","Shami","Bumrah","Siraj"];
+let fullTeam = [...tOrder , ...mOrder , ...tailOrder ];
+
+// console.log(`Indian Team In CWC 2023 = ${fullTeam}`);
+
+/*-----------------------------------------------------------------------------------------------------------*/
+
+// Functions in Javascript:-
+
+
+/*
+5. Function =>
+Function - It are first-class objects that can be passed to other functions, returned from functions, and assigned to variables and properties. They make JavaScript code more readable, organized, reusable, and maintainable Or 
+It is a block of code which is designed to perform a particular task.
+
+Function Definition[Before we use a function, we need to define it. A function definition (also called a function declaration/function statement) consists of the function keyword, followed by: 
+a.The name of the function,
+b. A list of parameters to the function, enclosed in parentheses and separated by commas, 
+c. The JavaScript statements that define the function, enclosed in curly brackets, {...}].
+
+Call Function[Defining a function cannot used it. It will execute when something invokes it (calls the function)]
+Function Parameters & Arguments[
+Function parameters are the names listed in the function's definition.
+Function arguments are the real values passed to the function OR passed the values when we call the function].
+
+Function Expressions[It simply means create a function and put it into the variable]
+
+Return Keyword[When JavaScript reaches a return statement, the function will stop executing. Functions often compute a return value. The return value is "returned" back to the "caller"]
+
+Anonymous Function[A function expression is similar to and has the same syntax as a function declaration. One can define "named" function expressions (where the name of the expression might be used in the call stack for example) or "anonymous" function expressions]
+We avoid giving function name i.e function(){}.
+*/
+
+
+let dg1 = 10;
+let dg2 = 5;
+let dgaddRes = dg1 + dg2;
+// console.log(dgaddRes);
+
+// We can't use this anywhere & can't change value of ok or ok1.
+// When we had to deal - ok2 with different-different numbers, so that time we can use functn.
+
+
+// don't use any varaibles name same as the function name given, it will run but we will had confusion...!
+
+function functionNew() {
+    let dg3 = 10;
+    let dg4 = 10;
+    let dgCombine = dg3 + dg4;
+    console.log(dgCombine); // 20
+}
+// functionNew();
+// console.log(functionNew());
+// console.log(`${functionNew()}`);
+
+
+function funcMulTask(num1, num2) {
+    const numMulTask = num1 * num2;
+    console.log(`Result with parameters & arguments = ${numMulTask}`);
+};
+// funcMulTask();
+// funcMulTask(5, 6);
+// funcMulTask(10, 12);
+
+
+function funcMulTask(num3, num4) {
+    const numMulTask1 = num3 * num4;
+    console.log(`Result with parameters & arguments = ${numMulTask1}`);
+};
+// let res = funcMulTask(4,6);
+// res;
+
+
+function funTaskAdd(num5, num6) {
+    return (addRes1 = num5 + num6);
+};
+let resAdd = funTaskAdd(10, 15);
+let resAdd1 = funTaskAdd(25, 50);
+
+// console.log(`
+// Result one = ${resAdd}
+// Result two = ${resAdd1}
+// `);
+
+
+let DivTask = function (num7, num8) {
+    return (resDev = num7 / num8);
+};
+let divR1 = DivTask(25, 5);
+let divR2 = DivTask(63, 7);
+
+// console.log(`
+// Result Task1 stored in variable = ${divR1}
+// Result Task2 stored in variable = ${divR2}
+// Results comparison 1 = ${divR1 < divR2}
+// Results comparison 2 = ${divR2 < divR1}
+// `);
+
+// console.log(`
+// Result one without storing in Variable = ${DivTask(25, 5)}
+// Result two without storing in Variable = ${DivTask(63, 7)}
+// `);
+
 
