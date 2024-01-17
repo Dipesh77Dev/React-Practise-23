@@ -1494,3 +1494,91 @@ let divR2 = DivTask(63, 7);
 // `);
 
 
+/* Functions Types in Javascript */
+
+/*
+1. Named Function
+2. Anonymous Function
+3. Arrow/Fat Arraw Function
+4. (IIFE) Function => Imediately Invocked function Expression
+5. Higher Order Function
+6. Constructor Function
+*/
+
+
+// Named Function:-
+
+function NameFunc(n1, n2) {
+    return n1 + n2;
+}
+// console.log(NameFunc(5, 6));
+
+
+// Anonymous Function:-
+
+let AnonFunc = function (TshrtNum) {
+    // console.log(`Virat's Tshirt Number is = ${TshrtNum}`);
+}
+AnonFunc(18);
+
+
+// Arrow Function:-
+
+let ArrFunc = (BatPos) => {
+    // console.log(`Rohit's Batting Position = ${BatPos}`);
+}
+ArrFunc("Opener");
+
+
+// IIFE function:-
+
+(function () {
+    let PerName = "Harsh Hariyani";
+    // console.log(`My name is = ${PerName}`);
+})()
+
+// Higher Order Functon:- 
+
+// Higher Order Functions [Function that take 1 or more function as an arguments or return a function. Function which takes another function as an arguments is called HOF(Higher Order Function) eg. CallBack function.
+// eg. map(), filter(), reduce()
+
+let hrOrrF = [20, 40, 60, 80];
+let hrOrrFNew = hrOrrF.map((hr) => hr * 6)
+// console.log(`Higher Order Function => ${hrOrrFNew}`);
+
+
+// Constructor Function:-
+
+// Note => Used as blueprints for creating with similar properties & methods. They are invoked using the new keyword to create instances of objects.
+
+
+function MeetStudData(nName, aAge) {
+    this.nName = nName;
+    this.aAge = aAge;
+}
+
+let MstudData = new MeetStudData("Harsh Hariyani", 19);
+
+// console.log(`
+// My name is => ${MstudData.nName}
+// My age is => ${MstudData.aAge}
+// `);
+
+
+// arguments.length property in function:-
+
+function ArgFunc(n1, n2, n3, n4) {
+    return arguments.length;
+}
+let ArgVal = ArgFunc(2, 5, 6, 8);
+// console.log(`Arguments used n this Function = ${ArgVal}`);
+
+
+// toString() method in function:-
+
+function conStrFunc(x1,x2){
+    return x1 * x2;
+}
+let ConStrFuncRes = conStrFunc.toString();
+// console.log(`Function in String = ${ConStrFuncRes}`);
+
