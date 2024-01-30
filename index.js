@@ -325,12 +325,12 @@ while (no < 5) {
 
 // do while loop:-
 
-let no1 = 10;
+let no11 = 10;
 
 do {
-    no1++;
+    no11++;
     // console.log(no1);
-} while (no1 < 5)
+} while (no11 < 5)
 
 
 /* Data Types in Javascript:-
@@ -1582,3 +1582,745 @@ function conStrFunc(x1,x2){
 let ConStrFuncRes = conStrFunc.toString();
 // console.log(`Function in String = ${ConStrFuncRes}`);
 
+/* Call,Apply & Bind Functionality in Javascript */
+
+// Call Function in Javascript:-
+
+let player1 = {
+    pName: "Virat",
+    pAge: 35,
+    pNation: "India",
+    printPlayerDetails: function () {
+        return this.pName + " " + this.pAge + " ";
+    }
+};
+player1.printPlayerDetails();
+
+
+let player2 = {
+    pName: "Rohit",
+    pAge: 36,
+    pNation: "India"
+}
+
+// Call function => It is called function Borrowing.
+
+// player1.printPlayerDetails.call(player2);
+
+// Give more values by call functionality:-
+
+// let p1 = player1.printPlayerDetails.call(player1, "Right Handed", "1st DOWN","Delhi");
+// let p2 = player1.printPlayerDetails.call(player2, "Right Handed", "Opener","Mumbai");
+
+// console.log(`
+// Player1 Details by call => ${p1}
+// Player2 Details by call => ${p2}
+// `);
+
+
+// Apply Function:-
+
+
+// pl3 = player1.printPlayerDetails.apply(player1, ["RCB", "Delhi", "1stDown"]);
+// pl4 = player1.printPlayerDetails.apply(player1, ["MI", "Mumbai", "opener"]);
+
+// console.log(`
+// Player1 Details by apply => ${pl3}
+// Player2 Details by apply => ${pl4}
+// `);
+
+
+// Bind Function:-
+
+// let bindPer = player1.printPlayerDetails.bind(player2);
+// console.log(bindPer());
+
+
+// Closures in Javascript:-
+
+// Example 1:-
+
+let add = function (v1) {
+    // console.log("Viewers" + v1);
+    var v2 = 8;
+    return function (v3) {
+        return v1 + v2 + v3;
+    }
+}
+let addInside = add(5);
+// console.log(`Add Value Is => ${addInside(6)}`);
+
+// Example 2:-
+
+let mulTask = function (s1, s2, s3) {
+    return {
+        sumofTwo: function () {
+            return s1 + s2;
+        },
+        sumofThree: function () {
+            return s1 + s2 + s3;
+        }
+    }
+}
+
+let resultAdd = mulTask(5, 6, 8)
+
+// console.log(`
+// Sum of two => ${resultAdd.sumofTwo()}
+// Sum of three => ${resultAdd.sumofThree()}
+// `);
+
+
+// Basic overview of Objects:-
+
+/*
+1. Property like => Value eg - model,color,weight etc. & Metho like => action eg- start,stop,break etc.
+2.Object contains many values it is (Non-Premitive).
+3. We can excess objects like (objName,ObjProperty).
+*/
+
+let meetFr = {
+    nameIst: "Harsh",
+    nameIstSirname: "Hariyani",
+    nameIInd: "Hardik",
+    homeTown: "Surat",
+    fr1FullName: function () {
+        return this.nameIst + " " + this.nameIstSirname;
+    }
+}
+// console.log(`
+// Friend one = ${meetFr.nameIst}
+// Friend two = ${meetFr["nameIInd"]}
+// Friend one full name = ${meetFr.fr1FullName()}
+//         `);
+
+
+// Javascript Objects:-
+
+/*
+What is Object Literal -> Object literal is simply a key:"value" pair data structure. Storing variables and functions together in one container, we can refer this as an Objects.
+eg. object = school bag(in one bag it contains every data like notebook, compass, tiffin, water bottle, etc...) 
+
+Why Objects -> 
+In primitive[string, no, boolean, symbol, null, undefined] - we can put only one value in it. it uses passed by value.
+*/
+
+
+let n1 = "Harsh"; // correct
+// let n1n2 = "Harsh","Tarun"; // incorrect
+let dgt1 = 5;   // correct
+// let dgt2 = 6,8 // incorrect
+let bolv = true;  // correct
+// let bolboth = true , false;  // incorrect
+
+// Passed by Vale:-
+
+let no1 = 50;
+let no2 = no1;
+// console.log(no1);  // 50
+// console.log(no2);  // 50
+no1 = 30;
+// console.log(no1);   // 30
+// console.log(no2);   // 50
+
+// Passed by reference:-
+
+let objOne = { Board: "BCCI" };
+let objTwo = objOne;
+// console.log(objOne);  // { Board: 'BCCI' }
+// console.log(objTwo);  // { Board: 'BCCI' }
+objOne.Board = "Bharat Board";
+// console.log(objOne);  // { Board: 'Bharat Board' }
+// console.log(objTwo);  // { Board: 'Bharat Board' }
+
+
+// Note => Remember when we write function inside objects its called as methods.
+
+// 1st way:-
+
+let myBio = {
+    myNaMe: "Harsh Hriyani",
+    myAge: 19,
+    getMyBio: function () {
+        console.log(myBio.myNaMe + " " + myBio.myAge);
+    }
+}
+// console.log(myNaMe); // error
+// console.log(myBio.myNaMe + " " + myBio.myAge);  
+// console.log(myBio.getMyBio());   // undefined
+
+// 2nd way:-
+
+let myBio1 = {
+    myName1: "Tarun Upadhyay",
+    myAge1: 26,
+    getMyBio1() {
+        console.log((myBio1.myName1) + " " + (myBio1.myAge1));
+    }
+}
+// myBio1.getMyBio1();
+
+
+// 3rd way:-
+
+let myBio2 = {
+    myFullName: {
+        realName: "Tarun Upadhyay",
+        favoritePlayer: "Virat Kohli"
+    },
+    myAgeNow: 26,
+    myHomeTown: "Bulandshahr",
+    getFullData() {
+        // console.log((myBio2.myFullName) + " " + (myBio2.myAgeNow));
+    }
+}
+myBio2.getFullData();
+// console.log((myBio2.myFullName.realName) + " " + (myBio2.myFullName.favoritePlayer));
+
+
+/*
+What is this Object ->
+The definition of "this" object is that it contain the current context[context or which scope it is working on] 
+The this object can have different values depending on where it is placed.  
+*/
+
+
+/*
+This will not work in editor, run this in browser ==>
+
+ex 1 ->
+console.log(this);
+console.log(this.alert('Awesome')); // it refers to the current context and that is window global object 
+
+
+
+ex 2 [this everytime refers to global object i.e nothing but an window object then what's its use case..] ->
+function myNamewithThis() {
+    console.log(this);
+}
+myNamewithThis();
+*/
+
+// Eg-3
+
+// var broName = "Harsh";
+// function myFrndName() {
+//     console.log(this.broName);
+// }
+// myFrndName();
+
+// Eg-4
+
+let objForFrnd = {
+    hisAge: 19,
+    myFrName() {
+        // console.log(this);
+        // console.log(this.hisAge);
+    }
+}
+// objForFrnd.myFrName();
+
+// Eg-5
+
+let objFrData = {
+    hisState: "Gujrat",
+    myFrbio: () => {
+        // console.log(this);
+        // console.log(this.hisState);
+    }
+}
+// objFrData.myFrbio();
+
+// Eg-6
+
+// Nested Objects:-
+
+let bioData = {
+    myName: {
+        realName: "Tarun Upadhyay",
+        hobbies: 'Playing Games'
+    },
+    myAge: 26,
+    getData() {
+        //   console.log(`My name is - ${this.myName.realName} and my age is - ${this.myAge} `); 
+    }
+}
+//   bioData.getData();
+
+
+// In JavaScript, arrays use numbered indexes; objects use named(key) indexes; In array we can't provide key to distinguish.
+
+// Adding key values in object:-
+
+let ob1 = {};
+ob1.name1 = "Harsh",
+    ob1.name2 = "Hariyani",
+    ob1.age = 19,
+    ob1.hometown = "Surat"
+// console.log(`His name is => {ob1.name1}`);
+
+
+const a = new String("");
+// console.log(a, typeof (a));
+
+// Object in array:-
+
+const arrob = ["Harsh", "Tarun", {
+    name: "Raj",
+    age: 22
+}, {}];
+//   console.log(arrob[2], arrob[2].name, arrob[3]);
+
+// new Object():-
+
+const person3 = new Object();
+person3.firstName = "John";
+person3.lastName = "Doe";
+person3.age = 50;
+person3.eyeColor = "blue";
+// console.log(typeof(person3))
+
+const ob2 = {
+    fname1: "Harsh",
+    lname: "Hariyani",
+    age1: 19
+}
+
+const change = ob2;
+change.age1 = 20;
+// console.log(change);
+// console.log(ob2);  
+
+// Array in object keys:- 
+
+const myObj = {
+    name: "John",
+    age: 30,
+    cars: [
+        { name: "Ford", models: ["Fiesta", "Focus", "Mustang"] },
+        { name: "BMW", models: ["320", "X3", "X5"] },
+        { name: "Fiat", models: ["500", "Panda"] }
+    ]
+}
+
+//   console.log(myObj.cars[1]);
+
+
+// To give methods to a function of object:-
+
+const obPer = {
+    p1name1: "Tarun",
+    p1name2: "Upadhyay",
+    fullNameofMe: function () {
+        return (this.p1name1 + " " + this.p1name2).toUpperCase().padStart(20);
+    }
+}
+
+// console.log(obPer.fullNameofMe());
+
+// Displaying a JavaScript object will output [object Object].
+// Displaying the Object Properties by name, Displaying the Object Properties in a Loop, Displaying the Object using Object.values(), Displaying the Object using JSON.stringify()
+
+// console.log(Object.keys(person), Object.values(person), Object.entries(person))
+// console.log(`Person Keys - ${person.keys}, Values - ${person.values}, Entries - ${person.entries}`)
+
+
+// keys, values & entries:-
+
+let objper2 = {
+    nName1: "Harsh",
+    nName2: "Hariyani",
+    nAge: 19
+}
+// console.log(`
+//     key =${Object.keys(objper2)}
+//     values =${Object.values(objper2)}
+//     entries =${Object.entries(objper2)}
+// `)
+
+
+// toLowerCase() & toLowerCase() methods:-
+
+const person5 = {
+    firstName: "John",
+    lastName: "Doe",
+    id: 5566,
+    fullName: function () {
+        return (this.firstName + " " + this.lastName).toUpperCase();
+    },
+    fullName1: function () {
+        return (this.firstName + " " + this.lastName).toLowerCase();
+    }
+}
+let res = person5.fullName()
+//   console.log(Object.keys(person5),Object.values(person5))
+
+
+// JSON.stringify() method:-
+
+let stOb = {
+    obName: "Harsh",
+    obAge: 19,
+    homeTown: "Surat"
+}
+let resStringify = JSON.stringify(stOb);
+// console.log(`Obj as String => ${resStringify}`);
+
+
+// looping in Objects:-
+
+const myFrObj = {
+    name: "Raj",
+    age: 21,
+    city: "Mumbai"
+}
+for (let k in myFrObj) {
+    // console.log(myFrObj[k]); 
+}
+
+// Note => It will itereate every key of object.
+
+const myObShoroom = {
+    name: "Harsh",
+    age: 19,
+    cars: [
+        { name: "Maruti", models: ["Celero", "Swift", "WagonR"] },
+        { name: "Huendai", models: ["Verna", "i10", "Aura"] },
+        { name: "Tata", models: ["Tiago", "Punch", "Neno"] }
+    ]
+}
+
+for (let i in myObShoroom.cars) {
+    // console.log(`Brand Name => ${myObShoroom.cars[i].name}`);
+    for (let j in myObShoroom.cars[i].models) {
+        // console.log(`Model => ${myObShoroom.cars[i].models[j]}`);
+    }
+}
+
+// Stringify Dates:-
+
+let obFr = {
+    name: "Hardik",
+    age: 26,
+    date: new Date()
+}
+let myStrDate = JSON.stringify(obFr);
+// console.log(myStrDate);
+
+let obfr2 = {
+    name: "Tarun",
+    age: function () {
+        return 30;
+    }
+}
+// console.log(JSON.stringify(obfr2))  // not stringify function.
+
+
+// How to fix it:-
+
+let obfr3 = {
+    name: "Tarun",
+    age: function () {
+        return 30;
+    }
+}
+obfr3.age = obfr3.age.toString();
+// console.log(JSON.stringify(obfr3)) 
+
+
+// Array stringify:-
+
+let arrCars = ["Celero", "Swift", "WagonR"];
+// console.log(JSON.stringify(arrCars));
+
+
+// Set => Setter in Objects:-
+
+const perDetail = {
+    plName: "Joy Root",
+    plAge: 32,
+    language: "no",
+    set lang(lang) {
+        this.language = lang;
+    }
+};
+perDetail.lang = "UK-eg";
+// console.log(perDetail.language);
+
+
+// Get => getter in objects:-
+
+const perDetail1 = {
+    fFname11: "Harsh",
+    fLname11: "Hariyani",
+    fage11: 19,
+    get fullName() {
+        return this.fFname11 + " " + this.fLname11;
+    }
+}
+// console.log(perDetail1.fullName);
+
+const perDetail2 = {
+    fFname11: "Harsh",
+    fLname11: "Hariyani",
+    fage11: 19,
+    get fname() {
+        return this.fFname11.toUpperCase();
+    }
+}
+
+// console.log(perDetail2.fname);
+
+
+// Objects creation by constructor method:-
+
+function perDet(n1, n2, Age, eyeColor) {
+    this.Fname = n1;
+    this.Lname = n2;
+    this.aAge = Age;
+    this.Ecolor = eyeColor;
+}
+
+const perDatafun = new perDet("Harsh", "Hariyani", 19, "Black");
+// console.log( perDatafun.Fname + " " + perDatafun.Lname);
+
+
+// Creating many objects & Value adding in objects:-
+
+function HomePerson(first, last, age, eye) {
+    this.firstName = first;
+    this.lastName = last;
+    this.age = age;
+    this.eyeColor = eye;
+    // Adding a constructor
+    this.nationality = "Bharat";
+    this.changelName = function (change) {
+        return this.lastName = change;
+    }
+}
+
+
+
+// Create two Person objects
+const myFather = new HomePerson("Anil", "Upadhyay", 59, "brown");
+const myMother = new HomePerson("Mamta", "Sharma", 48, "black");
+
+// Change lastname
+myMother.changelName("Upadhyay");
+
+//   Adding a Property to an Object
+
+//   myFather.nationality = "India";
+
+// Add a name method to first object
+
+myFather.name = function () {
+    return this.firstName + " " + this.lastName;
+};
+
+//   console.log(myFather.firstName);
+//   console.log(myMother.firstName);
+//   console.log(myFather.nationality);
+//   console.log(myFather.name());
+//   console.log(myMother.nationality);
+//   console.log(myMother.lastName);
+
+
+function PlDetails(name, sirname, age, shirt, team) {
+    this.playerName = name;
+    this.playerSName = sirname;
+    this.playerAge = age;
+    this.playerShirt = shirt;
+    this.playerTeam = team;
+}
+
+// adding property direct to object
+
+// PlDetails.prototype.country = "Bharat";
+
+// adding method direct to object
+
+PlDetails.prototype.name = function () {
+    return this.playerName + " " + this.playerSName;
+};
+
+
+let hodDetail = new PlDetails("Rohit", "Sharma", 36, 45, "India")
+
+// console.log(hodDetail.playerName + " " + hodDetail.country)
+// console.log(hodDetail.name());
+
+
+// Iterate on a string:-
+
+let strFrName = "Harsh";
+
+for (let alf of strFrName) {
+    // console.log(alf);
+}
+
+
+// Iterate on an array:-
+
+let arrNum1 = ["A", "B", "C", "D", "E"];
+
+for (let arrItr of arrNum1) {
+    // console.log(arrItr);
+}
+
+// Set in objects & find size of it:-
+
+let elemKitchen = new Set(["Chopper", "Knife", "Pan"]);
+// console.log(elemKitchen.size);
+
+
+// create an empty set by add method:-
+
+let PlayIqupments = new Set();
+PlayIqupments.add("Bat");
+PlayIqupments.add("Ball");
+PlayIqupments.add("Stumps");
+// console.log(PlayIqupments.size);
+
+
+// forEach loop for Set:-
+
+let frG = new Set(["Raj", "Hardik", "Harsh", "Tarun", "Vedant"]);
+
+// frG.forEach(function(value){
+//     // console.log(value);
+// })
+// console.log(frG.values())
+
+
+// Now you can use the Iterator object to access the elements:
+
+let frG1 = new Set(["Raj", "Hardik", "Harsh", "Tarun", "Vedant"]);
+
+for (const vl of frG1.values()) {
+    // console.log(vl);
+}
+
+// Map in Objects:-
+
+const frAr = new Map([
+    ["apples", 500],
+    ["bananas", 300],
+    ["oranges", 200]
+]);
+
+//   console.log(frAr.get("bananas"));
+
+
+// Create map set:-
+
+const EqPlayIt = new Map();
+
+// Set Map Values
+EqPlayIt.set("bat", 2700);
+EqPlayIt.set("ball", 150);
+EqPlayIt.set("stumps", 400);
+
+// change set value by Map
+// EqPlayIt.set("bat","40000");
+
+// console.log(EqPlayIt.get("ball"));
+// console.log(EqPlayIt.get("bat"));
+
+// Size of Map set
+// console.log(EqPlayIt.size);
+
+
+
+const EqCookIt = new Map([
+    ["pan", 2],
+    ["veesel", 4],
+    ["Hotcase", 1]
+]);
+
+// delete element
+// EqCookIt.delete("pan");
+
+// clear all elements
+// EqCookIt.clear();
+
+// has telll it will available in the Map set or not return booean values;
+// console.log(EqCookIt.has("pan"));
+// console.log(EqCookIt.has("hotcase"));
+
+// console.log(EqCookIt.size);
+
+
+const EqCookIt1 = new Map([
+    ["pan", 2],
+    ["veesel", 4],
+    ["Hotcase", 1]
+]);
+
+EqCookIt1.forEach(function(key,value){
+    // console.log(key + " " + value);
+})
+
+// entries() method in object:-
+
+const EqCookIt2 = new Map([
+    ["pan", 2],
+    ["veesel", 4],
+    ["Hotcase", 1]
+]);
+
+for(let en of EqCookIt2.entries()){
+    // console.log(en);
+}
+ 
+// keys() method in object:-
+
+const EqCookIt3 = new Map([
+    ["pan", 2],
+    ["veesel", 4],
+    ["Hotcase", 1]
+]);
+
+for(let ky of EqCookIt3.keys()){
+    // console.log(ky);
+}
+
+// keys() method in object:-
+
+const EqCookIt4 = new Map([
+    ["pan", 2],
+    ["veesel", 4],
+    ["Hotcase", 1]
+]);
+
+for(let vl of EqCookIt4.values()){
+    // console.log(vl);
+}
+
+// keys() method in object:-
+
+const EqCookIt5 = new Map([
+    ["pan", 2],
+    ["veesel", 4],
+    ["Hotcase", 1]
+]);
+
+let totalEq = 0;
+for(let vlt of EqCookIt5.values()){
+    totalEq += vlt;
+}
+// console.log(totalEq);
+
+const apples = {name: 'Apples'};
+const bananas = {name: 'Bananas'};
+const oranges = {name: 'Oranges'};
+
+// Create a Map
+const fruits1 = new Map();
+
+// Add the Objects to the Map
+fruits1.set(apples, 500);
+fruits1.set(bananas, 300);
+fruits1.set(oranges, 200);
+
+// console.log(fruits.get(apples));
