@@ -1,0 +1,29 @@
+/* Maggin & Padding  of CSS*/
+
+h5 {
+    color: darkgoldenrod;
+    font-size: 40px;
+    background-color: gold;
+    border: 2px solid black;
+    padding: 15px;
+    margin: 20px;
+}
+
+/* Anchor tag for HTML Link Colors */
+
+a:link {
+    color: green;
+    text-decoration: none;
+}
+a:visited {
+    color: blue;
+    text-decoration: none;
+}
+a:hover {
+    color: purple;
+    text-decoration: none;
+}
+a:active {
+    color: red;
+    text-decoration: none;
+}
