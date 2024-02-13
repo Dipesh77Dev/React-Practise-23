@@ -28,10 +28,75 @@ a:active {
     text-decoration: none;
 } */
 
-body{
+/* body{
     background-image: url('https://images.unsplash.com/photo-1682688759350-050208b1211c?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
-    color: black;
+    color: white;
     background-repeat: no-repeat;
-    /* background-attachment: fixed; */
-    background-size: 100% 100%;
+    background-attachment: fixed;
+    background-size: cover;
+} */
+
+table,
+th,
+td {
+    border: 1px solid black;
+    /* Aligen text of table */
+    text-align: center;
+    /* Border changed to single by border collapse */
+    /* border-collapse: collapse; */
+    /* Background to table */
+    /* background-color: crimson; */
+    /* Border radius to whole table */
+    /* border-radius: 5px; */
 }
+
+table {
+    /* Set Width of border */
+    /* width: 100%; */
+    /* table cell spacing */
+    border-spacing: 10px;
+}
+
+/* tr{
+    height: 50px;
+}  */
+
+th,
+td {
+    /* Border to th & td */
+    /* border: 1px solid black; */
+    /* Invisible border */
+    /* border: 1px solid white; */
+    /* Border radius to th & td */
+    /* border-radius: 10px; */
+    /* th & td cell padding */
+    /* padding: 15px; */
+    
+}
+
+table,
+td,
+th {
+    /* BORER TYPES IN HTML */
+
+    /* border: 2px solid red; */
+    /* border: 2px dashed red; */
+    /* border: 2px dotted red; */
+    /* border: 2px double red; */
+    /* border: 2px groove red; */
+    /* border: 2px ridge red; */
+    /* border: 2px inset red; */
+    /* border: 2px outset red; */
+    /* border: 2px hidden red; */
+    /* border: 2px none red; */
+}
+
+/* Vertical table styles */
+
+/* table, td ,th {
+    border: 1px solid red;
+    border-collapse: collapse;
+}
+ td{
+    text-align: center;
+} */
