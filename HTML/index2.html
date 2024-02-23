@@ -6,9 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Classes & Id in HTML</title>
     <style>
-        /* body{
+        body {
             height: 1000vh;
-        } */
+        }
+
         .item {
             background-color: crimson;
             color: white;
@@ -48,6 +49,30 @@
         .heading {
             background-color: sandybrown;
             padding: 10px;
+        }
+
+        .container-div {
+            width: 100%;
+            overflow: auto;
+            margin-bottom: 50px;
+        }
+
+        .box-div1 {
+            background-color: salmon;
+            width: 33%;
+            float: left;
+        }
+
+        .box-div2 {
+            background-color: goldenrod;
+            width: 33%;
+            float: left;
+        }
+
+        .box-div3 {
+            background-color: lightblue;
+            width: 33%;
+            float: left;
         }
     </style>
 </head>
@@ -123,5 +148,45 @@
     <p>Para 19</p>
     <p>Para 20</p>
 </body>
+<hr>
+<!-- Aligning <div> elements side by side -->
 
+<div class="container-div">
+    <div class="box-div1">
+        <h1>Heading1</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur magnam quam aliquam, culpa necessitatibus
+            enim debitis. At aperiam nam quisquam neque quas earum quod id laudantium? Iure, recusandae in. Aspernatur
+            voluptatum amet facilis incidunt, fugiat obcaecati! Cupiditate est necessitatibus deserunt inventore
+            asperiores. Doloribus at nihil impedit necessitatibus distinctio reprehenderit dolor.</p>
+    </div>
+    <div class="box-div2">
+        <h1>Heading1</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur magnam quam aliquam, culpa necessitatibus
+            enim debitis. At aperiam nam quisquam neque quas earum quod id laudantium? Iure, recusandae in. Aspernatur
+            voluptatum amet facilis incidunt, fugiat obcaecati! Cupiditate est necessitatibus deserunt inventore
+            asperiores. Doloribus at nihil impedit necessitatibus distinctio reprehenderit dolor.</p>
+    </div>
+    <div class="box-div3">
+        <h1>Heading1</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur magnam quam aliquam, culpa necessitatibus
+            enim debitis. At aperiam nam quisquam neque quas earum quod id laudantium? Iure, recusandae in. Aspernatur
+            voluptatum amet facilis incidunt, fugiat obcaecati! Cupiditate est necessitatibus deserunt inventore
+            asperiores. Doloribus at nihil impedit necessitatibus distinctio reprehenderit dolor.</p>
+    </div>
+</div>
+<hr>
+<!-- Iframe tag -->
+<iframe src="https://www.wikipedia.org/" frameborder="50px" title="wekepedia Homepage" style="border: 10px solid red;"
+    width="500px" height="auto"></iframe>
+<hr>
+<!-- Absolute file paths  -->
+<img src="https://images.unsplash.com/photo-1542446608-e9525230faed?q=80&w=1933&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="launtennis court">
+<hr>
+<img src="https://plus.unsplash.com/premium_photo-1664304371976-3c8af7953137?q=80&w=2059&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="peacock dancing">
+<hr>
+<!-- Relative file path -->
+<img src="/HTML/Images/snowskating.avif" alt="snowskating">
+<hr>
+<!-- Relative external folder path -->
+<img src="../PICTURES/rugby.avif" alt="rugby">
 </html>
