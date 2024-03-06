@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Html form</title>
+</head>
+
+<body>
+    <!-- HTML FORM -->
+    <fieldset>
+        <legend>HTML Basic Form</legend>
+        <form action="">
+            <label for="fname">First Name</label>
+            <input type="text" name="fname" id="fname" placeholder="Enter your first name..."><br><br>
+            <label for="lname">Last Name</label>
+            <input type="text" name="lname" id="lname" placeholder="Enter your last name..."><br><br>
+            <label for="Gender">Gender</label>
+            <input type="radio" id="male" name="gender">
+            <label for="male">Male</label>
+            <input type="radio" id="female" name="gender">
+            <label for="female">Female</label><br><br>
+            <label for="grosseries">Select Grosseries</label>
+            <input type="checkbox" name="floar" id="floar">
+            <label for="floar">Floar</label>
+            <input type="checkbox" name="suger" id="suger">
+            <label for="suger">Suger</label>
+            <input type="checkbox" name="powder" id="powder">
+            <label for="floar">Washing Powder</label>
+            <input type="checkbox" name="dishwash" id="dishwash">
+            <label for="floar">Dish wash</label><br><br>
+            <label for="brands">Car Brands</label>
+            <select name="select" id="select">
+                <option value="huendai">Huandai</option>
+                <option value="marutisuzuki">Maruti Suzuki</option>
+                <option value="tata">Tata</option>
+                <option value="honda">Honda</option>
+            </select><br><br>
+            <label for="textarea">Message</label>
+            <textarea name="text" id="text" cols="10" rows="2" placeholder="Type your message..."></textarea><br><br>
+            <button type="button" onclick="alert('Hello My form!')">Click Me!</button><br><br>
+            <input list="browsers" name="browsers">
+            <datalist id="browsers">
+                <option value="Opera">
+                <option value="Safari">
+                <option value="Brave">
+                <option value="Edge">
+            </datalist><br><br>
+            <label for="color">Select color</label>
+            <input type="color"><br><br>
+            <label for="date">Select Date</label>
+            <input type="date"><br><br>
+            <label for="datetime-local">Select Date Time Local</label>
+            <input type="datetime-local"><br><br>
+            <label for="email">Enter Email</label>
+            <input type="email"><br><br>
+            <label for="file">Select File</label>
+            <input type="file"><br><br>
+            <label for="hidden">Hidden</label>
+            <input type="hidden"><br><br>
+            <label for="image">Image</label>
+            <input type="image"><br><br>
+            <label for="month">Month</label>
+            <input type="month"><br><br>
+            <label for="number">Number</label>
+            <input type="number"><br><br>
+            <label for="password">Password</label>
+            <input type="password"><br><br>
+            <label for="search">Search</label>
+            <input type="search"><br><br>
+            <label for="phone">Tel Phone</label>
+            <input type="tel"><br><br>
+            <label for="time">Time</label>
+            <input type="time"><br><br>
+            <label for="url">URL</label>
+            <input type="url"><br><br>
+            <label for="week">Week</label>
+            <input type="week"><br><br>
+            <input type="reset" value="reset">
+            <input type="submit" value="Submit">
+        </form>
+    </fieldset>
+    <!-- New calculation Form -->
+    
+    <!-- <form action="" oninput="x.value=parseInt(a.value)+parseInt(b.value)">
+            0
+            <input type="range" name="a" id="a" value="50">
+            100 +
+            <input type="number" name="b" id="b" value="50">
+            =
+            <output name="x" for="a b"></output>
+            <br><br>
+        </form> -->
+
+</body>
+
+</html>
