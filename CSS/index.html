@@ -7,6 +7,14 @@
     <title>CSS Tutorial</title>
     <link rel="stylesheet" href="style.css">
     <style>
+        /* CSS RESET */
+
+        /* * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        } */
+
         /*  Select by tag/name */
         /* p {
             color: blue;
@@ -67,12 +75,96 @@
             color: blue;
         } */
 
-      
+        /* Color & Backgroun-color */
+        /* h1,p{
+            color: red;
+            background-color: blue;
+        } */
+
+        /* Background-image */
+        /* body {
+            width: 500px;
+            background-image: url('/PICTURES/background.avif');
+            background-repeat: no-repeat;
+            width: 25%;
+            background-attachment: fixed;
+        } */
+
+        /* div {
+            width: 75%;
+            float: left;
+            color: white;
+        } */
+
+        /* Background shorthand */
+        /*         
+        body{
+            background: aqua url('/PICTURES/rugby.avif') no-repeat top right;
+        } */
+
+        /* CSS Border types */
+
+        /* .allside {
+            border: 1px solid black;
+            padding: 10px;
+        }
+
+        .redbtm {
+            border-bottom: 1px solid red;
+            padding: 10px;
+        }
+
+        .rounded {
+            border: 1px solid blue;
+            padding: 10px;
+            border-radius: 5px;
+        }
+
+        .bluelft {
+            border-left: 3px solid blue;
+            padding: 10px;
+        } */
+
+        /*  Border Styles in CSS */
+
+        /* p { */
+        /* mix border = top style,right style,bottom style,left */
+        /* border-style: solid dotted double dashed;
+            border-color: red;
+        } */
+
+        /* .main{
+            width: 200px;
+            border: 2px solid red;
+            padding: 20px;
+            margin: auto;
+        } */
+
+        /* Height,width,max-width */
+
+        /* p {
+            border: 2px solid black;
+            height: 40px;
+            width: 80%;
+        }
+
+        span {
+            display: block;
+            border: 1px solid rebeccapurple;
+            height: 40px;
+            width: 50%;
+        } */
+
+        /* p{
+            border: 5px solid green;
+            outline: 5px solid red;
+            padding: 20px;
+        } */
     </style>
 </head>
 
 <body>
-  
+
     <!-- Select by tag name -->
     <!-- <p>Lorem ipsum dolor sit amet.</p> -->
 
@@ -118,6 +210,107 @@
     <!-- 
         Note=> In CSS inline > external > internal prayority.
      -->
+
+    <!-- CSS Colors(RGB,RGBA,HEX,HSL,HSLA) -->
+
+    <!-- Names colors -->
+
+    <!-- <h1 style="background-color:Tomato;">Tomato</h1>
+    <h1 style="background-color:Orange;">Orange</h1>
+    <h1 style="background-color:DodgerBlue;">DodgerBlue</h1>
+    <h1 style="background-color:MediumSeaGreen;">MediumSeaGreen</h1>
+    <h1 style="background-color:Gray;">Gray</h1>
+    <h1 style="background-color:SlateBlue;">SlateBlue</h1>
+    <h1 style="background-color:Violet;">Violet</h1>
+    <h1 style="background-color:LightGray;">LightGray</h1> -->
+
+    <!-- CSS background color -->
+
+    <!-- <h1>Hello</h1>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis aliquid laborum quis voluptate magnam, ratione
+        adipisci nam accusamus. Voluptates, quas totam repudiandae dolorem nesciunt mollitia!</p> -->
+
+    <!-- CSS Border -->
+
+    <!-- <h1 style="border: 2px solid Tomato;">Hello World</h1>
+
+    <h1 style="border: 2px solid DodgerBlue;">Hello World</h1>
+
+    <h1 style="border: 2px solid Violet;">Hello World</h1> -->
+    <!-- 
+    <h1 style="background-color:rgb(255, 99, 71);">rgb(255, 99, 71)</h1>
+<h1 style="background-color:#ff6347;">#ff6347</h1>
+<h1 style="background-color:hsl(9, 100%, 64%);">hsl(9, 100%, 64%)</h1>
+
+<p>Same as color name "Tomato", but 50% transparent:</p>
+<h1 style="background-color:rgba(255, 99, 71, 0.5);">rgba(255, 99, 71, 0.5)</h1>
+<h1 style="background-color:hsla(9, 100%, 64%, 0.5);">hsla(9, 100%, 64%, 0.5)</h1> -->
+
+    <!-- CSS background properties -->
+
+    <!-- Background color -->
+    <!-- <h1 style="background-color: red;">hello</h1> -->
+
+    <!-- Background image -->
+    <!-- <div>
+        <h1>Lorem ipsum dolor sit amet.</h1>
+        <h1>Lorem ipsum dolor sit amet.</h1>
+        <h1>Lorem ipsum dolor sit amet.</h1>
+        <h1>Lorem ipsum dolor sit amet.</h1>
+        <h1>Lorem ipsum dolor sit amet.</h1>
+        <h1>Lorem ipsum dolor sit amet.</h1>
+        <h1>Lorem ipsum dolor sit amet.</h1>
+        <h1>Lorem ipsum dolor sit amet.</h1>
+        <h1>Lorem ipsum dolor sit amet.</h1>
+        <h1>Lorem ipsum dolor sit amet.</h1>
+        <h1>Lorem ipsum dolor sit amet.</h1>
+        <h1>Lorem ipsum dolor sit amet.</h1>
+        <h1>Lorem ipsum dolor sit amet.</h1>
+        <h1>Lorem ipsum dolor sit amet.</h1>
+        <h1>Lorem ipsum dolor sit amet.</h1>
+        <h1>Lorem ipsum dolor sit amet.</h1>
+        <h1>Lorem ipsum dolor sit amet.</h1>
+        <h1>Lorem ipsum dolor sit amet.</h1>
+        <h1>Lorem ipsum dolor sit amet.</h1>
+        <h1>Lorem ipsum dolor sit amet.</h1>
+        <h1>Lorem ipsum dolor sit amet.</h1>
+        <h1>Lorem ipsum dolor sit amet.</h1>
+        <h1>Lorem ipsum dolor sit amet.</h1>
+        <h1>Lorem ipsum dolor sit amet.</h1>
+        <h1>Lorem ipsum dolor sit amet.</h1>
+        <h1>Lorem ipsum dolor sit amet.</h1>
+        <h1>Lorem ipsum dolor sit amet.</h1>
+        <h1>Lorem ipsum dolor sit amet.</h1>
+    </div> -->
+
+    <!-- CSS Bordrs -->
+
+    <!-- <p class="allside">I have borders on all sides.</p>
+    <p class="redbtm">I have a red bottom border.</p>
+    <p class="rounded">I have rounded borders.</p>
+    <p class="bluelft">I have a blue left border.</p> -->
+
+    <!-- Border styles check -->
+
+    <!-- <p>Styles check of border</p> -->
+
+    <!-- CSS margin Auto -->
+
+    <!-- <div class="main">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui perspiciatis architecto soluta optio inventore, eos
+        vel nam alias similique magnam.
+    </div> -->
+
+    <!-- CSS height ,width,max-width -->
+
+    <!-- <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nemo, quos?</p>
+    <span>Lorem</span> -->
+
+    <!-- CSS Outside -->
+    
+    <!-- <h1>hello</h1>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum, nemo?</p> -->
+
 </body>
 
 </html>
