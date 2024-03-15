@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Horizontal Navbar</title>
+    <style>
+        /* ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            background-color: black;
+            overflow: hidden;
+        }
+
+        li {
+            float: left;
+        }
+
+        ul li a {
+            display: inline-block;
+            text-decoration: none;
+            color: white;
+            padding: 12px 16px;
+        }
+
+        li a:hover {
+            background-color: #ccc;
+            color: black;
+        }
+
+        .active {
+            background-color: red;
+        } */
+
+        /* Extra */
+
+        /* li a:hover:not(.active){
+            background-color: #ccc;
+            color: black;
+        } */
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: white;
+        }
+
+        .header,
+        .footer {
+            background-color: brown;
+            color: white;
+            padding: 15px;
+        }
+
+        .main-section::after {
+            content: "";
+            display: table;
+            clear: both;
+
+        }
+
+        .lhs-content {
+            float: left;
+            width: 25%;
+            padding: 15px;
+        }
+
+        .lhs-content ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .lhs-content ul li {
+            background-color: lightblue;
+            margin-bottom: 8px;
+            text-align: center;
+            padding: 8px;
+        }
+
+        .lhs-content li:hover {
+            background-color: lightseagreen;
+        }
+
+        .rhs-content {
+            width: 75%;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- <ul>
+        <li><a class="active" href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Sevices</a></li>
+        <li><a href="#">Contact Us</a></li>
+    </ul> -->
+
+    <!-- CSS Layout -->
+
+    <!-- Header start -->
+    <div class="header">
+        <h1>My Webpage</h1>
+    </div>
+    <!-- Main section -->
+    <div class="main-section">
+        <!-- lhs-content -->
+        <div class="lhs-content">
+            <ul>
+                <li>The Flight</li>
+                <li>The City</li>
+                <li>The Island</li>
+                <li>The Food</li>
+            </ul>
+        </div>
+        <!-- rhs-content -->
+        <div class="rhs-content">
+            <h2>The City</h2>
+            <p>Chania is the capital of the Chania region on the island of Crete. The city can be divided in two parts,
+                the old town and the modern city.</p>
+            <p>You will learn more about web layout and responsive web pages in a later chapter.</p>
+        </div>
+    </div>
+    <!-- Footer -->
+    <div class="footer">
+        <p>Footer</p>
+    </div>
+</body>
+
+</html>

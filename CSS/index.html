@@ -475,17 +475,117 @@
             z-index: 1;
         } */
 
-        .text-div{
+        /* .text-div{
             border: 2px solid red;
             width: 500px;
-            height: 300px;
-            /* overflow: visible; */
-            /* Note => Overflow visible is default value */
+            height: 300px; */
+        /* overflow: visible; */
+        /* Note => Overflow visible is default value */
+        /* overflow: hidden; */
+        /* overflow: scroll; */
+        /* overflow: auto; */
+        /* overflow-x: scroll; */
+        /* overflow-y: hidden; */
+        /* } */
+        /* img {
+            width: 150px;
+            height: 150px;
+            margin-right: 15px;
+            float: left;
+        } */
+        /* div {
+            float: left;
+            padding: 15px;
+        }
+
+        .div1 {
+            background-color: red;
+        }
+
+        .div2 {
+            background-color: green;
+        }
+
+        .div3 {
+            background-color: yellow;
+        } */
+
+        /* .div1{
+            border: 2px solid red;
+            float: left;
+            padding: 15px;
+
+        }
+        .div2{
+            border: 2px solid green;
+            padding: 15px;
+            margin-bottom: 100px;
+        }
+
+        .div3{
+            border: 2px solid red;
+            float: left;
+            padding: 15px;
+           
+
+        }
+        .div4{
+            border: 2px solid green;
+            padding: 15px;
+            clear: left;
+        }
+         */
+        /* div {
+            border: 2px solid red;
+            padding: 5px;
+        }
+
+        div::after {
+
             /* overflow: hidden; */
-            /* overflow: scroll; */
-            /* overflow: auto; */
-            /* overflow-x: scroll; */
-            /* overflow-y: hidden; */
+        /*  content: "";
+            clear: both;
+            display: table;
+        }
+
+        .img1 {
+            width: 250px;
+            float: right;
+        }
+
+        .img2 {
+            width: 250px;
+            float: right;
+        } */
+        /* * {
+            box-sizing: border-box;
+        }
+
+        .box {
+            float: left;
+            width: 33.33%;
+            /* padding: 50px; */
+            /* margin-left: 1px; */
+            /* height: 300px;
+        }
+
+        .clear-fix::after {
+            content: "";
+            clear: both;
+            display: table;
+        } */ 
+        .flex-container{
+            display: flex;
+            background-color: darkcyan;
+            flex-wrap: nowrap;
+        }
+        .flex-container .box{
+            background-color: bisque;
+            width: 50%;
+            margin: 10px;
+            text-align: center;
+            line-height: 75px;
+            font-size: 30px;
         }
     </style>
 </head>
@@ -877,7 +977,7 @@ Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis aliquam cum
     </div> -->
 
     <!-- CSS OVERFLOW -->
-    <div class="text-div">
+    <!-- <div class="text-div">
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima rem veniam, tenetur incidunt, esse quibusdam
         libero optio nulla totam dignissimos animi saepe odio, mollitia tempora explicabo corporis ab porro laborum ipsa
         voluptate doloribus fugit. Ipsa vel itaque odio ullam accusamus beatae excepturi maxime ab quaerat consequuntur
@@ -892,8 +992,82 @@ Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis aliquam cum
         architecto laboriosam saepe repellendus! Quia placeat explicabo expedita optio nihil nobis iusto doloribus
         perspiciatis ipsam accusantium nam neque, dolores iste rem illum vitae velit iure nemo. Aliquid tempora
         accusamus consectetur in, perferendis at corrupti doloremque. Enim at totam ab.
-    </div>
+    </div> -->
 
+    <!-- Float in CSS -->
+
+    <!-- <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium eligendi aspernatur non, voluptate ipsum sed maiores, omnis dolorum saepe quis earum ut commodi. Facilis, deleniti!Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium eligendi aspernatur non, voluptate ipsum sed maiores, omnis dolorum saepe quis earum ut commodi. Facilis, deleniti!</p>
+    <p>
+        <img src="/PICTURES/rugby.avif" alt="players">
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Necessitatibus et quam ipsa illum quod nisi culpa?
+        Nobis expedita, tenetur in reprehenderit eveniet blanditiis ipsam tempore doloremque veniam, labore dolorem
+        necessitatibus natus et accusantium, quo molestiae! Cum soluta quaerat, corrupti iure tenetur, molestiae
+        suscipit quasi, aperiam beatae optio eligendi dignissimos hic.
+    </p> -->
+
+    <!-- Float each other -->
+
+    <!-- <div class="div1">Div1</div>
+    <div class="div2">Div2</div>
+    <div class="div3">Div3</div> -->
+
+    <!-- Clear in CSS -->
+
+    <!-- <div class="div1">Div1</div>
+    <div class="div2">Div2 - Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum ad dignissimos nesciunt quod itaque provident!</div>
+
+    <div class="div3">Div3</div>
+    <div class="div4">Div4 - Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum ad dignissimos nesciunt quod itaque provident!</div> -->
+
+    <!-- clearfix hack -->
+
+    <!-- <div>
+        <img src="/PICTURES/stairs.avif" alt="stairs" class="img1">
+        <img src="/PICTURES/rugby.avif" alt="stairs" class="img2">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam nobis ad asperiores dolores quis porro
+            corrupti reiciendis inventore esse, dignissimos tenetur sunt fugiat, aliquam excepturi.</p>
+    </div> -->
+
+    <!-- Grid boxes for float -->
+<!-- 
+    <div class="clear-fix">
+        <div class="box" style="background-color: #bbb;">
+            <p>Some text inside the box.</p>
+        </div>
+        <div class="box" style="background-color: #ccc;">
+            <p>Some text inside the box.</p>
+        </div>
+        <div class="box" style="background-color: #ddd;">
+            <p>Some text inside the box.</p>
+        </div>
+    </div>
+    <p><strong>Note:</strong>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quisquam fuga tempore harum magnam earum ad sit modi itaque. At cumque saepe dolorum iure, sunt distinctio explicabo modi nisi et autem?</p> -->
+
+
+    <!-- images side by side -->
+
+    <!-- <div class="clear-fix">
+        <div class="box">
+            <img src="/PICTURES/stairs.avif" alt="" width="100%">
+        </div>
+        <div class="box">
+            <img src="/PICTURES/stairs.avif" alt="" width="100%">
+        </div>
+        <div class="box">
+            <img src="/PICTURES/stairs.avif" alt="" width="100%">
+        </div>
+    </div>
+    <p><strong>Note:</strong>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quisquam fuga tempore harum magnam earum ad sit modi itaque. At cumque saepe dolorum iure, sunt distinctio explicabo modi nisi et autem?</p> -->
+
+    <!-- CSS flexible boxes -->
+    <div class="flex-container">
+        <div class="box">
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Numquam, earum sint, quia vel dicta esse quod asperiores repudiandae ut enim odit cumque officia minima id.</p>
+        </div>
+        <div class="box">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi, repudiandae!
+        </div>
+    </div>
 </body>
 
 
