@@ -6,726 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CSS Tutorial</title>
     <link rel="stylesheet" href="style.css">
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Madimi+One&display=swap');
-        /* CSS RESET */
 
-        /* * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        } */
-
-        /*  Select by tag/name */
-        /* p {
-            color: blue;
-        } */
-
-        /* Select by id name */
-
-        /* h1#heading1 {
-            color: red;
-        } */
-
-        /* Select by class name */
-
-        /* h2.heading2 {
-            color: green;
-        } */
-
-        /* For p's all new class get purple color. */
-
-        /* p.new {
-            color: purple;
-        } */
-
-        /* Multiple class target in CSS */
-
-        /* .hello {
-            color: red;
-        } */
-
-        /* .para {
-            color: blue;
-        } */
-
-        /* Universal selector */
-        /* *{
-            color: red;
-            text-align: center;
-        } */
-
-        /* The CSS Grouping Selector */
-
-        /* h1,
-        h2,
-        p {
-            color: red;
-            text-align: center;
-        } */
-
-        /* Internal CSS */
-
-        /* p{
-            color: blue;
-        } */
-
-        /* Internal prayority check  */
-
-        /* p {
-            color: blue;
-        } */
-
-        /* Color & Backgroun-color */
-        /* h1,p{
-            color: red;
-            background-color: blue;
-        } */
-
-        /* Background-image */
-        /* body {
-            width: 500px;
-            background-image: url('/PICTURES/background.avif');
-            background-repeat: no-repeat;
-            width: 25%;
-            background-attachment: fixed;
-        } */
-
-        /* div {
-            width: 75%;
-            float: left;
-            color: white;
-        } */
-
-        /* Background shorthand */
-        /*         
-        body{
-            background: aqua url('/PICTURES/rugby.avif') no-repeat top right;
-        } */
-
-        /* CSS Border types */
-
-        /* .allside {
-            border: 1px solid black;
-            padding: 10px;
-        }
-
-        .redbtm {
-            border-bottom: 1px solid red;
-            padding: 10px;
-        }
-
-        .rounded {
-            border: 1px solid blue;
-            padding: 10px;
-            border-radius: 5px;
-        }
-
-        .bluelft {
-            border-left: 3px solid blue;
-            padding: 10px;
-        } */
-
-        /*  Border Styles in CSS */
-
-        /* p { */
-        /* mix border = top style,right style,bottom style,left */
-        /* border-style: solid dotted double dashed;
-            border-color: red;
-        } */
-
-        /* .main{
-            width: 200px;
-            border: 2px solid red;
-            padding: 20px;
-            margin: auto;
-        } */
-
-        /* Height,width,max-width */
-
-        /* p {
-            border: 2px solid black;
-            height: 40px;
-            width: 80%;
-        }
-
-        span {
-            display: block;
-            border: 1px solid rebeccapurple;
-            height: 40px;
-            width: 50%;
-        } */
-
-        /* p{
-            border: 5px solid green;
-            outline: 5px solid red;
-            padding: 20px;
-        } */
-
-        /* Outline-offset */
-
-        /* p {
-            margin: 30px;
-            outline: 1px solid red;
-            border: 2px solid yellow;
-            outline-offset: 10px;
-        } */
-
-
-        /* div { */
-        /* text-align: justify; */
-        /* direction: ltr; */
-        /* } */
-        /* img{
-            vertical-align: baseline;  // default
-            vertical-align: text-top;
-            vertical-align: text-bottom;
-            vertical-align: sup;
-            vertical-align: super;
-        } */
-        /* Text decoration line */
-        /* p { */
-        /* text-decoration-line: underline; */
-        /* text-decoration-line: overline; */
-        /* text-decoration-line: line-through; */
-        /* text-decoration-line: overline underline; */
-        /* text-decoration-style: wavy; */
-        /* text-decoration-style: solid; */
-        /* text-decoration-color: red; */
-        /* text-decoration-thickness: 5px; */
-        /* shorthand of this*/
-        /* text-decoration: underline blue double 5px; */
-
-        /* } */
-
-        /* a{
-           text-decoration: none;
-           color: red;
-        } */
-
-        /* Text-transform */
-
-        /* p{
-            text-transform: uppercase;
-            text-transform: lowercase;
-            text-transform: capitalize;
-        } */
-
-        /* h1{ */
-        /* color: white; */
-        /* text-align: center; */
-        /* text-shadow: 2px 2px;  1st is x value & 2nd is y value */
-        /* text-shadow: 2px 2px grey;  last is color */
-        /* text-shadow: -2px -2px  grey; */
-        /* } */
-
-        /* body {
-            font-size: 100%;
-        } */
-
-        /* Google font */
-
-        /* p {
-            font-family: "Madimi One", sans-serif;
-            font-weight: 400;
-            font-style: normal;
-        } */
-
-        /* Styling links in CSS */
-
-        /* .linkone {
-            color: black;
-        }
-
-        .linkone:hover {
-            color: green;
-        }
-
-        .linktwo {
-            text-decoration: none;
-            color: greenyellow;
-        }
-
-        .linktwo:hover {
-            color: green;
-            text-decoration: underline;
-        }
-
-        .linkthree {
-            color: green;
-            background-color: transparent;
-            text-decoration: none;
-            border: 2px solid green;
-            padding: 4px 10px;
-        }
-        .linkthree:hover{
-            background-color: green;
-            color: white;
-            /* border: none; 
-        }
-
-        .linkfour{
-            color: white;
-            background-color: rgb(250, 62, 62);
-            padding: 4px 10px;
-            text-decoration: none;
-        }
-        .linkfour:hover{
-            background-color: red;
-        } */
-
-        /* span{
-            cursor: auto;
-            cursor: crosshair;
-           & SO ONE... 
-        } */
-
-        /* Give image to list */
-        /* ul {
-            list-style-image: url('/PICTURES/instaicon.png');
-        } */
-        /* .first li{
-            border: 2px solid black;
-            list-style-position: inside;
-        }
-
-        .second li {
-            border: 2px solid black;
-            list-style-position: inside;
-        }
-    */
-
-        /* List styling */
-
-        /* .myList {
-            background-color: aquamarine;
-            list-style-type: none;
-            list-style-position: inside;
-            padding: 10px;
-        }
-        .myList li{
-            background-color: hotpink;
-            padding: 5px;
-            margin: 3px;
-            color: white;
-            text-shadow: 2px 2px 3px black;
-        } */
-        /* table {
-            width: 100%;
-            text-align: center;
-            border: 1px solid #000;
-            font-family: Verdana, Geneva, Tahoma, sans-serif;
-        }
-
-        table,
-        td,
-        th {
-            border-bottom: 1px solid #000;
-            border-collapse: collapse;
-            padding: 5px;
-        }
-
-        th {
-            height: 40px;
-            background-color: rgb(62, 197, 109);
-            color: white;
-            padding: 5px;
-            font-weight: 900;
-        }
-        td{
-            height: 40px;
-          vertical-align: bottom; 
-        }
-
-        tr:nth-child(even) {
-            background-color: #ccc;
-        }
-
-        tr:hover {
-            background-color: grey;
-            color: white;
-            cursor: pointer;
-        } */
-
-        /* margin auto */
-
-        /* .container{
-            border: 1px solid red;
-            width: 250px;
-            margin: auto;
-        } */
-        /* .mydiv{
-            width: 500px;
-            border: 2px solid red;
-            margin: auto;
-        } */
-
-        /* .mydiv{
-            max-width: 500px;
-            border: 2px solid red;
-            margin: auto;
-        } */
-        /* li{
-            background-color: aqua;
-            display: inline;
-        } */
-
-        /* span{
-            background-color: cadetblue;
-            display: block;
-        } */
-        /* .two {
-            display: none;
-        }
-
-        .three {
-            visibility: hidden;
-        } */
-        /* .static{
-            background-color: aqua;
-            border: 1px solid red;
-            padding: 20px;
-        } */
-
-        /* .relative{
-            border: 1px solid red;
-            left: 30px;
-            position: relative;
-        } */
-        /* body{
-            height: 200vh;
-        }
-        .fixed{
-            border: 2px solid red;
-            position: fixed;
-            width: 100%;
-            top: 0;
-            background-color: lightblue;
-        } */
-
-        /* .relative{
-            position: relative;
-            border: 2px solid red;
-            width: 500px;
-            height: 300px;
-        }
-        .absolute{
-            position: absolute;
-            border: 2px solid red;
-            width: 300px;
-            height: 150px;
-            top: 100px;
-            left: 20px;
-        } */
-        /* body{
-            height: 200vh;
-        } */
-
-        /* .sticky{
-            border: 2px solid green;
-            position: sticky;
-            top: 0;
-        } */
-
-        /* .container {
-            position: relative;
-        }
-
-        .container img {
-            /* width: 800px; */
-        /* width: 100%; */
-        /* height: 600px; */
-        /* }  */
-
-        /* .container .text { */
-        /* color: white; */
-        /* position: absolute; */
-        /* top: 20px; */
-        /* top: 50%;
-            left: 50%; */
-        /* } */
-
-        /* .container {
-            position: relative;
-        }
-
-        .red-box{
-            position: relative;
-            width: 300px;
-            height: 150px;
-            border: 2px solid red;
-            z-index: 2;
-        }
-        .blue-box{
-            position: absolute;
-            width: 280px;
-            height: 120px;
-            background-color: lightblue;
-            top: 25px;
-            left: 60px;
-            z-index: 3;
-
-        }
-        .green-box{
-            position: absolute;
-            width: 160px;
-            height: 150px;
-            background-color: lightgreen;
-            top: 25px;
-            z-index: 1;
-        } */
-
-        /* .text-div{
-            border: 2px solid red;
-            width: 500px;
-            height: 300px; */
-        /* overflow: visible; */
-        /* Note => Overflow visible is default value */
-        /* overflow: hidden; */
-        /* overflow: scroll; */
-        /* overflow: auto; */
-        /* overflow-x: scroll; */
-        /* overflow-y: hidden; */
-        /* } */
-        /* img {
-            width: 150px;
-            height: 150px;
-            margin-right: 15px;
-            float: left;
-        } */
-        /* div {
-            float: left;
-            padding: 15px;
-        }
-
-        .div1 {
-            background-color: red;
-        }
-
-        .div2 {
-            background-color: green;
-        }
-
-        .div3 {
-            background-color: yellow;
-        } */
-
-        /* .div1{
-            border: 2px solid red;
-            float: left;
-            padding: 15px;
-
-        }
-        .div2{
-            border: 2px solid green;
-            padding: 15px;
-            margin-bottom: 100px;
-        }
-
-        .div3{
-            border: 2px solid red;
-            float: left;
-            padding: 15px;
-           
-
-        }
-        .div4{
-            border: 2px solid green;
-            padding: 15px;
-            clear: left;
-        }
-         */
-        /* div {
-            border: 2px solid red;
-            padding: 5px;
-        }
-
-        div::after {
-
-            /* overflow: hidden; */
-        /*  content: "";
-            clear: both;
-            display: table;
-        }
-
-        .img1 {
-            width: 250px;
-            float: right;
-        }
-
-        .img2 {
-            width: 250px;
-            float: right;
-        } */
-        /* * {
-            box-sizing: border-box;
-        }
-
-        .box {
-            float: left;
-            width: 33.33%;
-            /* padding: 50px; */
-        /* margin-left: 1px; */
-        /* height: 300px;
-        }
-
-        .clear-fix::after {
-            content: "";
-            clear: both;
-            display: table;
-        } */
-
-        /* .flex-container{
-            display: flex;
-            background-color: darkcyan;
-            flex-wrap: nowrap;
-        }
-        .flex-container .box{
-            background-color: bisque;
-            width: 50%;
-            margin: 10px;
-            text-align: center;
-            line-height: 75px;
-            font-size: 30px;
-        } */
-
-        /* span.a {
-        display: inline; 
-        width: 100px;
-        height: 100px;
-        padding: 80px 50px;
-        border: 1px solid blue;  
-        background-color: yellow; 
-      } */
-
-        /* Navbar by Dispaly inline block */
-        /* 
-        .navbar {
-            background-color: yellow;
-            text-align: center;
-            list-style: none;
-        }
-
-        .navbar li {
-            display: inline-block;
-            margin: 10px 15px;
-        }
-
-        .navbar li a {
-            text-decoration: none;
-            color: red;
-        } */
-        /* .container {
-            width: 50%;
-            border: 2px solid green;
-            margin: auto;
-        } */
-
-        /* img {
-            display: block;
-            width: 40%;
-            margin: 0 auto 0 auto;
-            margin-right: auto; 
-            /* margin-left: auto;
-        } */
-        /* .main{ */
-        /* position: absolute; */
-        /* width: 300px; */
-        /* border: 2px solid red; */
-        /* right: 0; */
-        /* float: left; */
-        /* } */
-        /* . */
-        /* .col{
-            border: 2px solid green;
-            padding: 70px 0;
-        } */
-
-        /* .container {
-            height: 200px;
-            border: 2px solid red;
-            position: relative;
-        }
-
-        .container p {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-        } */
-
-        /* Flex items centering */
-
-        /* .container {
-            border: 2px solid red;
-            background-color: green;
-            height: 400px;
-            display: flex;
-            align-items: center;
-            justify-content: space-evenly;
-        }
-
-        .item {
-            width: 120px;
-            height: 120px;
-            background-color: aqua;
-        } */
-        /* div  p{
-            background-color: red;
-        } */
-        /* div > p{
-            background-color: red;
-        } */
-        /* div + p{
-            background-color: red;
-        } */
-        /* div ~ p{
-            background-color: red;
-        } */
-
-        /* unvisited link
-        a:link {
-            color: red;
-        }
-
-        /* visited link */
-        /* a:visited {
-            color: green;
-        } */
-
-        /* mouse over link */
-        /* a:hover {
-            color: hotpink;
-        } */
-
-        /* selected link */
-        /* a:active {
-            color: blue;
-        }  */
-
-        /* p{
-            display: none;
-        }
-
-        div:hover p{
-            display: block;
-            background-color: yellow;
-            color: black;
-            width: 50%;
-            padding: 15px;
-        } */
-        /* p::first-line{
-            color: red;
-            font-variant: small-caps;
-        } */
-
-        /* p::first-letter{
-            color: red;
-            font-variant: small-caps;
-            font-size: 20px;
-            font-weight: 900;
-        } */
-    </style>
 </head>
 
 <body>
@@ -1363,9 +644,194 @@ Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis aliquam cum
     <!-- <div>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptates, aliquam.
         <p>Lorem data is here</p>
     </div> -->
-    <p>
+    <!-- <p>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos illo nobis recusandae voluptatibus id, odio fuga blanditiis veritatis alias nisi earum quae maiores, magnam culpa officia dolorum enim quisquam architecto nulla dignissimos ipsum sint rem aspernatur sapiente. Culpa, placeat. Exercitationem veniam aliquid saepe, eius accusamus velit ducimus doloribus modi fugit maxime. Magni aliquid a cum reiciendis repellendus. Enim, nemo eum. Obcaecati, quibusdam debitis! Sed fuga eum nostrum accusantium dolorum odio quis eius explicabo in ipsa rem eos nobis, non eveniet nesciunt tempora quas eligendi obcaecati. Tempora, quibusdam modi deserunt, aliquam rem corporis odit at sed, voluptatum omnis dolorem necessitatibus pariatur.
+    </p> -->
+
+    <!-- <h1>Hello Harsh</h1>
+    <h2>Hello Harsh</h2> -->
+
+    <!-- <ul>
+        <li>Home</li>
+        <li>Home</li>
+        <li>Home</li>
+        <li>Home</li>
+    </ul> -->
+
+    <!-- <h1>Lorem</h1>
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aut, temporibus. Molestias natus exercitationem itaque impedit, facilis, aliquid adipisci velit quos corporis amet praesentium nulla id.</p> -->
+
+    <!-- <img src="/PICTURES/rugby.avif" alt=""> -->
+
+    <!-- <div>Div Transparancy</div> -->
+
+    <!-- <div class="main">
+        <div class="submain">
+            <h1>Lorem ipsum dolor sit amet.</h1>
+        </div>
+    </div> -->
+
+    <!-- Vertical fixed navigation bar in CSS -->
+
+    <!-- <ul>
+    <li><a class="active" href="#">Home</a></li>
+    <li><a href="#">About</a></li>
+    <li><a href="#">Services</a></li>
+    <li><a href="#">Contact</a></li>
+</ul>
+<div>
+    <h2>Fixed Navbar</h2>
+    <h3>Fixed in nature</h3>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni optio sed cupiditate facilis delectus nostrum harum enim itaque ipsa blanditiis?</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni optio sed cupiditate facilis delectus nostrum harum enim itaque ipsa blanditiis?</p>
+    <p>Lorem ipsum dolor sit amet.</p>
+    <p>Lorem ipsum dolor sit amet.</p>
+    <p>Lorem ipsum dolor sit amet.</p>
+    <p>Lorem ipsum dolor sit amet.</p>
+    <p>Lorem ipsum dolor sit amet.</p>
+    <p>Lorem ipsum dolor sit amet.</p>
+    <p>Lorem ipsum dolor sit amet.</p>
+    <p>Lorem ipsum dolor sit amet.</p>
+    <p>Lorem ipsum dolor sit amet.</p>
+    <p>Lorem ipsum dolor sit amet.</p>
+    <p>Lorem ipsum dolor sit amet.</p>
+    <p>Lorem ipsum dolor sit amet.</p>
+    <p>Lorem ipsum dolor sit amet.</p>
+    <p>Lorem ipsum dolor sit amet.</p>
+    <p>Lorem ipsum dolor sit amet.</p>
+    <p>Lorem ipsum dolor sit amet.</p>
+    <p>Lorem ipsum dolor sit amet.</p>
+    <p>Lorem ipsum dolor sit amet.</p>
+    <p>Lorem ipsum dolor sit amet.</p>
+    <p>Lorem ipsum dolor sit amet.</p>
+    <p>Lorem ipsum dolor sit amet.</p>
+    <p>Lorem ipsum dolor sit amet.</p>
+</div> -->
+
+    <!-- horizontal Navigation Bar -->
+
+    <!-- <header>
+    <h1>My Webpage</h1>
+</header>
+<ul>
+    <li><a class="active" href="#">Home</a></li>
+    <li><a href="#">About</a></li>
+    <li><a href="#">Services</a></li>
+    <li><a  href="#">Contact</a></li>
+</ul>
+<div>
+    <h2>lorem data</h2>
+    <h3>Lorem ipsum dolor sit amet.</h3>
+    <p>
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dignissimos repellendus quidem, quos molestias, rerum tempora, fugit nam numquam magnam amet quam veritatis aliquid velit porro dolores laborum obcaecati minus a distinctio. Sequi eum voluptatem odit. Quibusdam, nesciunt repellat consectetur dolores non tempore odio facilis placeat ex velit eius, expedita maxime?
     </p>
+    <p>Lorem ipsum dolor sit amet.</p>
+    <p>Lorem ipsum dolor sit amet.</p>
+    <p>Lorem ipsum dolor sit amet.</p>
+    <p>Lorem ipsum dolor sit amet.</p>
+    <p>Lorem ipsum dolor sit amet.</p>
+    <p>Lorem ipsum dolor sit amet.</p>
+    <p>Lorem ipsum dolor sit amet.</p>
+    <p>Lorem ipsum dolor sit amet.</p>
+    <p>Lorem ipsum dolor sit amet.</p>
+    <p>Lorem ipsum dolor sit amet.</p>
+    <p>Lorem ipsum dolor sit amet.</p>
+    <p>Lorem ipsum dolor sit amet.</p>
+    <p>Lorem ipsum dolor sit amet.</p>
+    <p>Lorem ipsum dolor sit amet.</p>
+    <p>Lorem ipsum dolor sit amet.</p>
+    <p>Lorem ipsum dolor sit amet.</p>
+    <p>Lorem ipsum dolor sit amet.</p>
+    <p>Lorem ipsum dolor sit amet.</p>
+    <p>Lorem ipsum dolor sit amet.</p>
+    <p>Lorem ipsum dolor sit amet.</p>
+    <p>Lorem ipsum dolor sit amet.</p>
+    <p>Lorem ipsum dolor sit amet.</p>
+    <p>Lorem ipsum dolor sit amet.</p>
+    <p>Lorem ipsum dolor sit amet.</p>
+    <p>Lorem ipsum dolor sit amet.</p>
+    <p>Lorem ipsum dolor sit amet.</p>
+    <p>Lorem ipsum dolor sit amet.</p>
+    <p>Lorem ipsum dolor sit amet.</p>
+    <p>Lorem ipsum dolor sit amet.</p>
+    <p>Lorem ipsum dolor sit amet.</p>
+    <p>Lorem ipsum dolor sit amet.</p>
+    <p>Lorem ipsum dolor sit amet.</p>
+    <p>Lorem ipsum dolor sit amet.</p>
+    <p>Lorem ipsum dolor sit amet.</p>
+    <p>Lorem ipsum dolor sit amet.</p>
+    <p>Lorem ipsum dolor sit amet.</p>
+    <p>Lorem ipsum dolor sit amet.</p>
+    <p>Lorem ipsum dolor sit amet.</p>
+    <p>Lorem ipsum dolor sit amet.</p>
+    <p>Lorem ipsum dolor sit amet.</p>
+    <p>Lorem ipsum dolor sit amet.</p>
+    <p>Lorem ipsum dolor sit amet.</p>
+    <p>Lorem ipsum dolor sit amet.</p>
+</div> -->
+
+
+    <!-- Dropdown -->
+
+    <!-- <ul>
+    <li><a href="#">Home</a></li>
+    <li><a href="#">About</a></li>
+    <li class="dropdown"><a href="#" class="dropbtn">Services</a>
+    <div class="dropdown-content">
+        <a href="#">Service 1</a>
+        <a href="#">Service 2</a>
+        <a href="#">Service 3</a>
+    </div>
+    </li>
+</ul> -->
+
+    <!-- Hoverable dropdown -->
+
+    <!-- <div class="dropdown">
+        <span>Hover on me</span>
+        <div class="drop-content">
+            <p>Hello World!</p>
+        </div>
+    </div> -->
+
+
+    <!-- Hoverable image -->
+    <!-- 
+    <div class="dropdown">
+        <img src="/PICTURES/rugby.avif" alt="players" width="150px" height="80px">
+        <div class="drop-content">
+            <img src="/PICTURES/rugby.avif" alt="players" width="500px" height="300px">
+            <div class="desc">Rugby Players</div>
+        </div>
+    </div> -->
+
+    <!-- Image gallery -->
+
+    <div class="gallery">
+        <a href="">
+            <img src="/PICTURES/rugby.avif" alt="players">
+        </a>
+        <div class="desc">Image One</div>
+    </div>
+    <div class="gallery">
+        <a href="">
+            <img src="/PICTURES/rugby.avif" alt="players">
+        </a>
+        <div class="desc">Image One</div>
+    </div>
+    <div class="gallery">
+        <a href="">
+            <img src="/PICTURES/rugby.avif" alt="players">
+        </a>
+        <div class="desc">Image One</div>
+    </div>
+    <div class="gallery">
+        <a href="">
+            <img src="/PICTURES/rugby.avif" alt="players">
+        </a>
+        <div class="desc">Image One</div>
+    </div>
+    
 </body>
 
 
