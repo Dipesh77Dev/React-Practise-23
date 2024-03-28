@@ -992,7 +992,7 @@ li a {
     display: block;
 } */
 
-.gallery {
+/* .gallery {
     margin: 5px;
     border: 1px solid #ccc;
     float: left;
@@ -1007,4 +1007,75 @@ li a {
 .gallery .desc{
     padding: 5px;
     text-align: center;
+} */
+
+
+/* Form in CSS */
+
+/* input[type=text], select{
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
 }
+
+input[type=submit]{
+    width: 100%;
+    background-color: #4CAF50;
+    border: none;
+    padding: 14px 20px;
+    border-radius: 4px;
+    margin: 8px 0;
+    cursor: pointer;
+    color: white;
+}
+
+input[type=submit]:hover{
+    background-color: green;
+}
+
+div{
+    background-color: #ddd;
+    padding: 10px;
+    border-radius: 5px;
+} */
+
+/* input[type=text] {
+    width: 40%;
+    padding: 15px 45px;
+    border-radius: 4px;
+    background-image: url(/PICTURES/searchicon.png);
+    background-repeat: no-repeat;
+    background-position: 3px 7px;
+    border: none;
+    border: 2px solid #ccc;
+    box-sizing: border-box;
+    font-size: 25px;
+    transition: width 4s ease-in-out;
+}
+
+input[type=text]:focus {
+    width: 100%;
+} */
+
+/* select {
+    width: 100%;
+    padding: 10px 16px;
+    border-radius: 5px;
+    margin-top: 12px;
+} */
+
+/* button {
+    width: 20%;
+    padding: 10px 15px;
+    border-radius: 5px;
+    border: none;
+    font-size: 20px;
+}
+
+button:hover{
+    background-color: #555;
+    color: white;
+} */
