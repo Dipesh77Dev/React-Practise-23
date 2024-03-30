@@ -1079,3 +1079,67 @@ button:hover{
     background-color: #555;
     color: white;
 } */
+
+/* CSS Units */
+
+/* p{
+    line-height: 50px;
+} */
+
+
+/* Pixel unit */
+
+/* px is an absolute unit of measurement used to specify length and sizes. px is a fixed unit and should be used sparingly and with caution for responsive design. */
+
+/* Rem unit:- */
+
+/*
+   16px = 1rem 
+   Note=> It stands for root em.
+   */
+
+/* em unit:- */
+
+/* 
+   It is relate to the parent element or nearest parent.
+   */
+
+/* percenteange unit:- */
+
+/* Percentages are relative units that render an element relative to the size of the element's parent. */
+
+
+/* viewport height (vh) */
+
+/* vh is a relative unit of measurement that represents the visible height area of the browser window. */
+
+/* viewport height (vw) */
+
+/* vw is similar to vh but vw refers to the width of the browser window. It is used to set elements based on the horizontal axis of the browser window. */
+
+
+/* ch unit*/
+
+/*
+ch is a relative unit that scales based on the width of characters. 1ch is equal to the width of the "0" character in the current font. */
+
+/* 1ch = 8px */
+
+
+/* div>p {
+    font-size: 1ch;
+} */
+
+/* 
+Specificity in CSS:-
+
+1. Inline styles - Example: <h1 style="color: pink;">
+2. IDs - Example: #navbar
+3. Classes, pseudo-classes, attribute selectors - Example: .test,       :hover, [href]
+4. Elements and pseudo-elements - Example: h1, ::before
+*/
+
+/* 
+If we apply !important to any styling ruther then it is internal or external style it will specify that style on the UI.
+*/
+
