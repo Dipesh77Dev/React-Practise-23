@@ -1,0 +1,136 @@
+* {
+    margin: 0;
+    padding: 0;
+    /* background-color: bisque; */
+}
+
+/* Roundeed Corner */
+
+/* .color {
+    width: 150px;
+    height: 150px;
+    background-color: red;
+    margin: 30px auto;
+    border-radius: 20px 30px 20px 30px;
+} */
+
+/* .empty {
+    width: 150px;
+    height: 150px;
+    border: 2px solid black;
+    margin: 30px auto;
+    border-radius: 20px 30px 20px 30px;
+    /* border-radius: 50%; */
+
+/* 
+    Note=> When you want to give circle shape to your element then make sure that your element's height & width are equal.
+    
+} 
+*/
+/* .img {
+    width: 250px;
+    height: 250px;
+    background-image: url(/PICTURES/rugby.avif);
+    background-size: contain; */
+/* background-repeat: no-repeat; */
+/* margin: 30px auto; */
+/* border-radius: 5px 30px; */
+/* border-top-left-radius: 20px;
+    border-top-right-radius: 50px;
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 80px; */
+/* } */
+
+
+/*  Border Image */
+
+/* .borderimg{
+    width: 50%;
+    border: 10px solid transparent;
+    margin: auto;
+    padding: 15px;
+    border-image: url('/PICTURES/instaicon.png') 30 round;
+} */
+
+
+/* Background (Multiple) */
+
+/* .main{
+    width: 800px;
+    height: 700px;
+    background-image: url('/PICTURES/flowers.png'), url('/PICTURES/texture.jpeg');
+    background-position: right bottom, left top;
+    background-repeat: no-repeat;
+    padding: 15px;
+    color: white;
+} */
+
+
+/* body {
+    background-image: url(/PICTURES/texture.jpeg);
+}
+
+.one {
+    width: 600px;
+    border: 2px solid black;
+    padding: 15px;
+    text-align: center;
+    margin: 5px auto;
+    background-color: hotpink;
+}
+
+.two {
+    width: 600px;
+    border: 2px solid black;
+    padding: 15px;
+    text-align: center;
+    margin: 5px auto;
+    background-color: transparent;
+} */
+
+/* Current color  */
+
+/* h1{
+    color: red;
+    border: 5px solid currentColor;
+} */
+
+/* Inherit color */
+
+/* div{
+    border: 2px solid green;
+    padding: 15px;
+}
+
+span{
+    border: inherit;
+} */
+
+/* .divmain {
+    width: 600px;
+    height: 380px;
+    border: 2px solid black;
+    margin: 150px auto; */
+    /* Default value => top to bottom => 1st one default*/
+    /* background-image: linear-gradient(purple, yellow);
+    background-image: linear-gradient(to top, purple, yellow);
+    background-image: linear-gradient(to bottom, aqua, magenta);
+    background-image: linear-gradient(to right, orange, green);
+    background-image: linear-gradient(to left, pink, blue); */
+    /* background-image: linear-gradient(to bottom left, pink, blue);
+    background-image: linear-gradient(to bottom right, pink, blue);
+    background-image: linear-gradient(to top right, pink, blue);
+    background-image: linear-gradient(to top left, pink, blue); */
+/* } */
+
+/* #grad {
+    width: 800px;
+    height: 50px;
+    background-image: linear-gradient(to right, red,orange,yellow,green,blue,indigo,violet);
+  } */
+
+  /* #grad {
+    width: 800px;
+    height: 50px;
+    background-image: repeating-linear-gradient(red, yellow 10%, green 20%);
+  } */
