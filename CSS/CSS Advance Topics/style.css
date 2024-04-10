@@ -111,13 +111,13 @@ span{
     height: 380px;
     border: 2px solid black;
     margin: 150px auto; */
-    /* Default value => top to bottom => 1st one default*/
-    /* background-image: linear-gradient(purple, yellow);
+/* Default value => top to bottom => 1st one default*/
+/* background-image: linear-gradient(purple, yellow);
     background-image: linear-gradient(to top, purple, yellow);
     background-image: linear-gradient(to bottom, aqua, magenta);
     background-image: linear-gradient(to right, orange, green);
     background-image: linear-gradient(to left, pink, blue); */
-    /* background-image: linear-gradient(to bottom left, pink, blue);
+/* background-image: linear-gradient(to bottom left, pink, blue);
     background-image: linear-gradient(to bottom right, pink, blue);
     background-image: linear-gradient(to top right, pink, blue);
     background-image: linear-gradient(to top left, pink, blue); */
@@ -129,8 +129,177 @@ span{
     background-image: linear-gradient(to right, red,orange,yellow,green,blue,indigo,violet);
   } */
 
-  /* #grad {
+/* #grad {
     width: 800px;
     height: 50px;
     background-image: repeating-linear-gradient(red, yellow 10%, green 20%);
   } */
+
+/* text shadow */
+
+/* h1{ */
+/* text-align: center; */
+/* margin-top: 200px; */
+/* font-size: 64px; */
+/* text-transform: uppercase; */
+/*  Syntax =>  text-shadow: x y fade color; */
+/* text-shadow: 2px 3px 4px blue; */
+/* text-shadow: -2px -3px 4px red; */
+/* text-shadow: -2px -3px 4px red , 2px 3px 4px blue; */
+/* } */
+
+/* Box shadow  */
+
+/* .box { */
+/* width: 50%; */
+/* border: 2px solid black; */
+/* padding: 10px; */
+/* margin: 200px auto; */
+/* text-align: center; */
+/* background-color: khaki; */
+/*  Syntax =>  box-shadow: x y fade color; */
+/* box-shadow: 2px 4px 5px gray; */
+/* box-shadow: -2px -4px 5px teal; */
+/* } */
+
+/* Text border as shadow */
+
+/* h1{
+    text-align: center;
+    margin: 200px auto;
+    color: rgb(43, 178, 178);
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+} */
+
+
+/* 
+.card-text{
+    width: 350px;
+    height: 350px;
+    background-color: rgb(87, 77, 77);
+    margin: 50px auto;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.card-text .text-data{
+    background-color: black;
+    width: 100%;
+    height: 300px;
+    display: grid;
+    place-items: center;
+    font-size: 280px;
+    color: white;
+}
+
+h3{
+    width: 150px;
+    margin: 12px auto;
+    font-size: 20px;
+    color: white;
+} */
+
+/* Text overflow clip & ellipsis */
+
+/* p {
+    white-space: nowrap;
+    width: 200px;
+    border: 1px solid #000000;
+    overflow: hidden;
+    overflow: visible;
+    text-overflow: clip; 
+    text-overflow: ellipsis;
+} */
+
+/* Word wrap property */
+
+/* .box {
+    width: 11em;
+    border: 1px solid #000000;
+    word-wrap: break-word;
+} */
+
+/* word break */
+
+/* p.test1 {
+    width: 140px; 
+    border: 1px solid #000000;
+    word-break: keep-all;
+  }
+  
+  p.test2 {
+    width: 140px; 
+    border: 1px solid #000000;
+    word-break: break-all;
+  } */
+
+/* writing mode */
+
+/* p {
+    margin-top: 200px;
+} */
+
+/* .new {
+    writing-mode: vertical-rl;
+} */
+
+/* Translate x,y */
+
+/* .myDiv{
+    border: 1px solid black;
+    width: 60%;
+    height: 30%;
+    background-color: aqua;
+    /* Syntax=>  transform: translate(x,y); (+/-)*/
+/* transform: translate(20%,50%); */
+/* }  */
+/* */
+
+/* rotate */
+
+/* .myDiv1{
+    width: 400px;
+    height: 200px;
+    border: 2px solid black;
+    background-color: yellow;
+    transform: rotate(20deg);
+    transform: rotate(-20deg);
+} */
+
+/* sclae */
+
+/* .box{
+    width: 150px;
+    height: 150px;
+    background-color: red;
+    margin: 200px auto;
+}
+
+.box:hover{
+  transform: scale(2);
+} */
+
+
+/* Skew */
+
+/* .box {
+    width: 300px;
+    height: 150px;
+    margin: 200px auto;
+    border: 2px solid black;
+    background-color: aqua; */
+    /* transform: skew(20deg, 10deg); */
+    /* transform: skewX(20deg);
+    transform: skewY(20deg); */
+/* } */
+
+/* matrix */
+
+/* .box1 {
+    width: 300px;
+    height: 150px;
+    margin: 200px auto;
+    background-color: blueviolet;
+    border: 2px solid black; */
+    /*Syntax =>  transform: matrix(scaleX(), skewY(), skewX(), scaleY(), translateX(), translateY()) */
+    /* transform: matrix(1, 0, 0.5, 1, 150, 0); */
+/* } */
