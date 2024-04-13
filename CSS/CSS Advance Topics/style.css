@@ -500,7 +500,60 @@ img:hover {
     left: 50%;
     transform: translate(-50%, -50%);
 }
+/* } */
 
-.container:hover .overlay{
+/* .container:hover .overlay{
     opacity: 1;
 } */
+
+/* object fit in css */
+/* 
+img {
+    background-color: aquamarine;
+    width: 200px;
+    height: 300px; */
+/* It will cover the width & height*/
+/* object-fit: cover; */
+/* It will contain the width that it wants Without breaking pixals */
+/* object-fit: contain; */
+/* It will fill the width & height that it want */
+/* object-fit: fill; */
+/* It will cover the width & height and it will appears as maximum zoom*/
+/* object-fit: none; */
+/* It will scale-down the width that it wants Without breaking pixals */
+/* object-fit: scale-down; */
+
+/* Buttons in CSS */
+
+/* .btn{
+        background-color: crimson;
+        text-decoration: none;
+        padding: 8px 18px;
+        border: none;
+        display: inline-block;
+        color: white;
+        font-size: 25px;
+     } */
+
+     /* Pagination */
+
+/* .pagination {
+    display: inline-block;
+}
+
+.pagination a {
+    color: black;
+    float: left;
+    padding: 8px 16px;
+    text-decoration: none;
+} */
+
+/* p{
+    column-count: 3;
+    text-align: justify;
+    column-gap: 50px;
+    column-rule: 2px solid red;
+    column-span: all;
+    column-width: 150px;
+} */
+
