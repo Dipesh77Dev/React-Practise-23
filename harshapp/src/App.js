@@ -1,10 +1,12 @@
 import React from 'react'
+import Mainchellange from './component/chellange/Mainchellange'
 
 const App = () => {
-  return (
-    <div>
-     <h1 {style={color:"red"}}>hello world</h1> 
-    </div>
+  return (  
+    <>
+    {/* chellanges   */}
+    <Mainchellange />
+    </>
   )
 }
 
