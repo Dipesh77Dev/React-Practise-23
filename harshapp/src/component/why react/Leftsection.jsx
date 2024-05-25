@@ -1,0 +1,29 @@
+import React from 'react'
+import Rightsection from './Rightsection';
+
+
+const Leftsection = () => {
+    return (
+        <>
+        <section>
+        <div class="left-section">
+                <h1>Heading 1</h1>
+                <hr />
+                <h2>Heading 2</h2>
+                <hr />
+                <h3>Heading 3</h3>
+                <hr />
+                <h4>Heading 4</h4>
+                <hr />
+                <h5>Heading 5</h5>
+                <hr />
+                <h6>Heading 6</h6>
+            </div>
+            <Rightsection />
+        </section>
+       
+        </>
+    )
+}
+
+export default Leftsection;
